@@ -70,3 +70,6 @@ a.btn-link:hover {
         font-size: 15px;
     }
 }
+@media all and (max-width: 50em) {
+    .heading-small { font-weight: 250; }
+}
