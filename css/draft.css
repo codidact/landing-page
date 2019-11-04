@@ -47,6 +47,7 @@ a.btn-link {
     transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
     -webkit-transition: 0.3s all ease;
+    border-radius: 6px;
 }
 img.invert {
     filter: invert(100%)
