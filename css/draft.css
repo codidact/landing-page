@@ -13,16 +13,16 @@ h1 {
     margin: 15px 0;
 }
 
-.subtitle {
-    font-size: 1.25em;
-    text-align: left;
-    margin: 1.5em 0;
-}
-
 .heading-big {
     font-weight: lighter;
     font-size: 5em;
     margin: 15px 0;
+}
+
+.subtitle {
+    font-size: 1.25em;
+    text-align: left;
+    margin: 1.5em 0;
 }
 
 .heading-small {
@@ -55,17 +55,17 @@ a.btn-link {
     border-radius: 6px;
 }
 
-img.invert {
-    filter: invert(100%)
+a.btn-link:hover {
+    color: #a20025;
+    box-shadow: 0 14px 14px rgba(0,0,0,.3);
 }
 
 a.btn-link img {
     width: 50px;
 }
 
-a.btn-link:hover {
-    color: #a20025;
-    box-shadow: 0 14px 14px rgba(0,0,0,.3);
+img.invert {
+    filter: invert(100%)
 }
 
 @media all and (max-width: 60em) {
