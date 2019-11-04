@@ -1,7 +1,9 @@
 * { box-sizing: border-box; }
+
 html {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 body { margin: 0; padding: 0; }
 
 h1 {
@@ -16,16 +18,19 @@ h1 {
     text-align: left;
     margin: 1.5em 0;
 }
+
 .heading-big {
     font-weight: lighter;
     font-size: 5em;
     margin: 15px 0;
 }
+
 .heading-small {
     font-weight: lighter;
     font-size: 3.5em;
     margin: 15px 0;
 }
+
 .container-centered {
     padding: 6em;
     min-height: 100vh;
@@ -49,16 +54,20 @@ a.btn-link {
     -webkit-transition: 0.3s all ease;
     border-radius: 6px;
 }
+
 img.invert {
     filter: invert(100%)
 }
+
 a.btn-link img {
     width: 50px;
 }
+
 a.btn-link:hover {
     color: #a20025;
     box-shadow: 0 14px 14px rgba(0,0,0,.3);
 }
+
 @media all and (max-width: 60em) {
     .container-centered {
         padding: 2em;
@@ -70,6 +79,7 @@ a.btn-link:hover {
         font-size: 15px;
     }
 }
+
 @media all and (max-width: 50em) {
     .heading-small { font-weight: 250; }
 }
