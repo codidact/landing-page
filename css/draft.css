@@ -39,7 +39,7 @@ h1 {
     color: white;
 }
 
-a.btn-link {
+.btn-link {
     font-size: 20px;
     box-shadow: 0 14px 14px rgba(0,0,0,0.16);
     -webkit-box-shadow: 0 14px 14px rgba(0,0,0,0.16);
@@ -55,12 +55,12 @@ a.btn-link {
     border-radius: 6px;
 }
 
-a.btn-link:hover {
+.btn-link:hover {
     color: #a20025;
     box-shadow: 0 14px 14px rgba(0,0,0,.3);
 }
 
-a.btn-link img {
+.btn-link img {
     width: 50px;
 }
 
