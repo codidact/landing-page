@@ -1,10 +1,15 @@
-* { box-sizing: border-box; }
-
-html {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-body { margin: 0; padding: 0; }
+html {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 h1 {
     font-size: 5em;
@@ -41,12 +46,12 @@ h1 {
 
 .btn-link {
     font-size: 20px;
-    box-shadow: 0 14px 14px rgba(0,0,0,0.16);
-    -webkit-box-shadow: 0 14px 14px rgba(0,0,0,0.16);
-    -moz-box-shadow: 0 14px 14px rgba(0,0,0,0.16);
+    box-shadow: 0 14px 14px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 14px 14px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 14px 14px rgba(0, 0, 0, 0.16);
     display: inline-block;
-    padding: .60em 1.10em;
-    margin: 0 .2em;
+    padding: 0.6em 1.1em;
+    margin: 0 0.2em;
     color: inherit;
     text-decoration: none;
     transition: 0.3s all ease;
@@ -57,7 +62,7 @@ h1 {
 
 .btn-link:hover {
     color: #a20025;
-    box-shadow: 0 14px 14px rgba(0,0,0,.3);
+    box-shadow: 0 14px 14px rgba(0, 0, 0, 0.3);
 }
 
 .btn-link img {
@@ -65,21 +70,30 @@ h1 {
 }
 
 img.invert {
-    filter: invert(100%)
+    filter: invert(100%);
 }
 
 @media all and (max-width: 60em) {
     .container-centered {
         padding: 2em;
     }
-    .heading-big { font-size: 3em; }
-    .heading-small { font-size: 1.75em; }
+
+    .heading-big {
+        font-size: 3em;
+    }
+
+    .heading-small {
+        font-size: 1.75em;
+    }
+
     a.btn-link {
-        margin: .5em;
+        margin: 0.5em;
         font-size: 15px;
     }
 }
 
 @media all and (max-width: 50em) {
-    .heading-small { font-weight: 250; }
+    .heading-small {
+        font-weight: 250;
+    }
 }
