@@ -4,6 +4,7 @@
   "description": "Codidact Landing Page",
   "main": "index.js",
   "scripts": {
+    "lint": "npm run stylelint",
     "stylelint": "stylelint \"css/*.css\"",
     "stylelint-fix": "stylelint \"css/*.css\" --fix"
   },
