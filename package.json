@@ -1,0 +1,24 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Codidact Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "stylelint": "stylelint \"css/*.css\"",
+    "stylelint-fix": "stylelint \"css/*.css\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codidact/landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codidact/landing-page/issues"
+  },
+  "homepage": "https://codidact.org",
+  "devDependencies": {
+    "stylelint": "^12.0.0",
+    "stylelint-config-standard": "^19.0.0"
+  }
+}
