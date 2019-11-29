@@ -11,9 +11,8 @@ The Codidact project landing page. Join us in discussions on our [Discourse form
 
 ## Linting
 
-Whilst CI tools will be used at a later date, before submitting a PR ensure your code is linted
-running `npm run lint`. Any submitted PRs wil lbe rejected if linting does not pass.
+Whilst CI tools will be used at a later date, before submitting a PR ensure your code is linted by running `npm run lint`. Any submitted PRs will be rejected if linting does not pass.
 
--   All formatting (except JS) handled by Prettier (reccomended to install a auto-formatter for you IDE). Config in .prettierrc
--   JS formatting and linting handled by ESLint. JSON config in .eslintrc (to be added)
--   CSS linting handled by stylelint. JSON config in .stylelintrc
+-   All formatting (except JS) is handled by Prettier (we recommend installing an auto-formatter for your IDE). The configuration is located in `.prettierrc`.
+-   JS formatting and linting is handled by ESLint. JSON config resides in `.eslintrc` (to be added).
+-   CSS linting handled by stylelint. JSON config in `.stylelintrc`.
