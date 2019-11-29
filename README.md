@@ -1,6 +1,6 @@
 # codidact-landing-page
 
-The Codidact project landing page.
+The Codidact project landing page. Join us in discussions on our [Discourse form](https://forum.codidact.org/). We use a [Discord server](https://discord.gg/7jf8UzS) for communication.
 
 [See it in action](https://codidact.org/)
 
