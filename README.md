@@ -2,7 +2,8 @@
 
 The Codidact project landing page.
 
-This site is live at https://codidact.org/. A staging environment is deployed via [GitHub Pages](https://github.com/codidact/landing-page/deployments) and can be seen at https://codidact.github.io/landing-page/.
+This site is live at https://codidact.org/.  
+A staging environment is deployed via [GitHub Pages](https://github.com/codidact/landing-page/deployments) and can be seen at https://codidact.github.io/landing-page/.
 
 ## Setting up your local development environment
 
