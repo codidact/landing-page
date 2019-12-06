@@ -6,7 +6,9 @@
     "scripts": {
         "lint": "npm run stylelint",
         "stylelint": "stylelint \"dist/assets/css/primary.css\"",
-        "stylelint-fix": "stylelint \"css/*.css\" --fix"
+        "stylelint-fix": "stylelint \"css/*.css\" --fix",
+        "remove-assets": "rm -rf ./dist/assets/css && rm -rf ./dist/assets/js && mkdir ./dist/assets/css && mkdir ./dist/assets/js",
+        "start": "npm run remove-assets && webpack --config ./dev.webpack.config.js --mode development"
     },
     "repository": {
         "type": "git",
