@@ -6,7 +6,7 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, "../dist"),
-        filename: "js/[name].js",
+        filename: "assets/js/[name].js",
     },
 
     module: {
@@ -18,11 +18,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [
-                    { loader: "style-loader", options: { sourceMap: true } },
-                    { loader: "css-loader", options: { sourceMap: true } },
-                    { loader: "sass-loader", options: { sourceMap: true } },
-                ],
+                use: [{ loader: "style-loader" }, { loader: "css-loader" }, { loader: "sass-loader" }],
             },
         ],
     },
