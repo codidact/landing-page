@@ -18,6 +18,15 @@ h1 {
     margin: 15px 0;
 }
 
+
+.container-centered {
+    padding: 6em;
+    min-height: 100vh;
+    text-align: left;
+    background-color: #2d3436;
+    color: white;
+}
+
 .heading-big {
     font-weight: lighter;
     font-size: 5em;
@@ -34,14 +43,6 @@ h1 {
     font-weight: lighter;
     font-size: 3.5em;
     margin: 15px 0;
-}
-
-.container-centered {
-    padding: 6em;
-    min-height: 100vh;
-    text-align: left;
-    background-color: #2d3436;
-    color: white;
 }
 
 .logos {
