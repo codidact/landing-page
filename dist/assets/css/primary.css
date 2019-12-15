@@ -44,6 +44,11 @@ h1 {
     color: white;
 }
 
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .btn-link {
     font-size: 20px;
     box-shadow: 0 14px 14px rgba(0, 0, 0, 0.16);
@@ -51,7 +56,7 @@ h1 {
     -moz-box-shadow: 0 14px 14px rgba(0, 0, 0, 0.16);
     display: inline-block;
     padding: 0.6em 1.1em;
-    margin: 0 0.2em;
+    margin: 0 0.3em;
     color: inherit;
     text-decoration: none;
     transition: 0.3s all ease;
