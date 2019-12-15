@@ -69,10 +69,6 @@ h1 {
     width: 46px;
 }
 
-img.invert {
-    filter: invert(100%);
-}
-
 @media all and (max-width: 60em) {
     .container-centered {
         padding: 2em;
