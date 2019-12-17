@@ -2,6 +2,7 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "font-family-name-quotes": "always-unless-keyword",
-    "indentation": 4
+    "indentation": 4,
+    "string-quotes": ["double", { "avoidEscape": false }]
   }
 }
