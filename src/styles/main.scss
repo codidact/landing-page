@@ -1,16 +1,13 @@
 @import "normalize.scss";
-
-:root {
-    --color-black: #2b2b2b;
-}
+@import "variables.scss";
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-family: "Red Hat Display", sans-serif;
-    font-size: 18px;
+    font-family: $primary-font;
+    font-size: $has-normal-font-size;
 }
 
 div,
@@ -20,21 +17,22 @@ section {
 }
 
 .content-wrapper {
-    max-width: 1200px;
+    max-width: calc(#{$max-body-width} + #{$gutter} * 2);
     width: 100%;
     margin: 0 auto;
+    padding: 0 $gutter;
 }
 
 .row {
-    max-width: 1200px;
+    max-width: calc(#{$max-body-width} + #{$gutter} * 2);
     width: 100%;
     margin: 0 auto;
 }
 
-.row.is-full-width {
+.is-full-width {
     max-width: 100%;
 }
 
 .footer {
-    background-color: var(--color-black);
+    background-color: $color-black;
 }
