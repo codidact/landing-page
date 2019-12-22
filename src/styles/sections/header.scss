@@ -1,0 +1,42 @@
+.header {
+    text-align: center;
+
+    .header__links,
+    .header__logo {
+        vertical-align: top;
+        position: relative;
+    }
+
+    .header__links {
+        position: relative;
+
+        img {
+            height: 35px;
+            margin: 10px;
+            width: auto;
+        }
+    }
+
+    .header__logo {
+        height: auto;
+        margin: $gutter 0 0 0;
+        width: 180px;
+    }
+
+    @include for-tablet-landscape-up {
+        padding-bottom: $gutter;
+        padding-top: $gutter;
+        text-align: left;
+
+        .header__links,
+        .header__logo {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .header__links {
+            float: right;
+            top: -6px;
+        }
+    }
+}
