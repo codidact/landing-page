@@ -1,4 +1,6 @@
 .header {
+    padding-bottom: $gutter;
+    padding-top: $gutter;
     text-align: center;
 
     .header__links,
@@ -19,13 +21,10 @@
 
     .header__logo {
         height: auto;
-        margin: $gutter 0 0 0;
         width: 180px;
     }
 
     @include for-tablet-landscape-up {
-        padding-bottom: $gutter;
-        padding-top: $gutter;
         text-align: left;
 
         .header__links,
