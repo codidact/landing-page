@@ -22,14 +22,20 @@
         <script type="text/javascript">
             var _paq = window._paq || [];
             /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
+            _paq.push(["trackPageView"]);
+            _paq.push(["enableLinkTracking"]);
             (function() {
-            var u="//analytics.codidact.org/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '2']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+                var u = "//analytics.codidact.org/";
+                _paq.push(["setTrackerUrl", u + "matomo.php"]);
+                _paq.push(["setSiteId", "2"]);
+                var d = document,
+                    g = d.createElement("script"),
+                    s = d.getElementsByTagName("script")[0];
+                g.type = "text/javascript";
+                g.async = true;
+                g.defer = true;
+                g.src = u + "matomo.js";
+                s.parentNode.insertBefore(g, s);
             })();
         </script>
         <!-- End Matomo Code -->
@@ -44,14 +50,14 @@
         <![endif]-->
         <header class="header row is-full-width">
             <div class="content-wrapper is-full-width">
-                <img src="assets/img/codidact-logo.svg" class="header__logo" alt="Codidact logo" width="170" />
+                <img src="source-assets/img/logo-codidact.svg" class="header__logo" alt="Codidact logo" width="170" />
                 <div class="header__links">
                     <a href="https://github.com/codidact/docs/wiki" target="_blank" class="link header__link">
                         <img src="assets/img/wiki-logo.png" class="link__logo" alt="Wiki logo" width="46" height="46" />
                     </a>
                     <a href="https://forum.codidact.org" target="_blank" class="link header__link">
                         <img
-                            src="assets/img/discourse-logo.png"
+                            src="assets/img/3rd-party/logo-discourse.png"
                             class="link__logo"
                             alt="Discourse logo"
                             width="46"
@@ -60,7 +66,7 @@
                     </a>
                     <a href="https://discord.gg/WZ7aTst" target="_blank" class="link header__link">
                         <img
-                            src="assets/img/discord-logo.png"
+                            src="assets/img/3rd-party/logo-discord-chat.png"
                             class="link__logo"
                             alt="Discord logo"
                             width="46"
@@ -69,7 +75,7 @@
                     </a>
                     <a href="https://github.com/codidact" target="_blank" class="link header__link">
                         <img
-                            src="assets/img/github-logo.png"
+                            src="assets/img/3rd-party/logo-github.png"
                             class="link__logo"
                             alt="Github logo"
                             width="46"
@@ -87,7 +93,11 @@
                     <p>By the community.</p>
                 </div>
                 <div class="container spans-6">
-                    <img src="assets/img/brand-mark.svg" class="large-brand-mark" alt="large Codidact brand mark" />
+                    <img
+                        src="soure-assets/img/brand-mark.svg"
+                        class="large-brand-mark"
+                        alt="large Codidact brand mark"
+                    />
                 </div>
             </div>
         </section>
@@ -98,7 +108,7 @@
         <section class="row content-wrapper"></section>
         <section class="row content-wrapper"></section>
         <footer class="footer row is-full-width">
-            <img src="assets/img/codidact-logo-white.svg" class="footer__logo" alt="Codidact logo" width="170" />
+            <img src="source-assets/img/codidact-logo-white.svg" class="footer__logo" alt="Codidact logo" width="170" />
             <p class="tagline">a catchy tagline can go here</p>
         </footer>
         <script type="text/javascript" src="assets/js/main.js"></script>
