@@ -5,10 +5,10 @@
     "main": "index.js",
     "scripts": {
         "lint": "npm run stylelint",
-        "stylelint": "stylelint \"dist/assets/css/primary.css\"",
-        "stylelint-fix": "stylelint \"css/*.css\" --fix",
+        "stylelint": "stylelint \"src/styles/*.scss\"",
+        "stylelint-fix": "stylelint \"src/styles/*.scss\" --fix",
         "remove-assets": "rm -rf ./dist/assets/css && rm -rf ./dist/assets/js && mkdir ./dist/assets/css && mkdir ./dist/assets/js",
-        "start": "npm run remove-assets && webpack --config ./config/dev.webpack.config.js --mode development"
+        "start": "npm run remove-assets && webpack-dev-server --config ./config/dev.webpack.config.js --mode development"
     },
     "repository": {
         "type": "git",
@@ -40,7 +40,8 @@
         "stylelint-config-standard": "^19.0.0",
         "stylelint-scss": "^3.13.0",
         "webpack": "^4.41.2",
-        "webpack-cli": "^3.3.10"
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.10.1"
     },
     "dependencies": {
         "stylelint": "^12.0.0"

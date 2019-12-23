@@ -22,6 +22,10 @@ module.exports = {
             },
         ],
     },
+    devServer: {
+        contentBase: ["./dist"],
+        port: 3000,
+    },
     devtool: "cheap-eval-source-map",
     watch: true,
 };
