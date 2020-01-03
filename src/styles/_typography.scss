@@ -9,3 +9,20 @@ $has-x-large-font-size: 7rem;
 $has-regular-weight: 400;
 $has-bold-weight: 700;
 $has-black-weight: 900;
+
+.heading {
+    &--primary {
+        font-size: $has-x-large-font-size;
+        font-weight: $has-black-weight;
+    }
+
+    &--secondary {
+        font-size: $has-large-font-size;
+        font-weight: $has-black-weight;
+    }
+
+    &--tertiary {
+        font-size: $has-medium-font-size;
+        font-weight: $has-regular-weight;
+    }
+}
