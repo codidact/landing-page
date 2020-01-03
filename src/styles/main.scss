@@ -1,5 +1,6 @@
 @import "normalize.scss";
 @import "variables.scss";
+@import "grid.scss";
 
 * {
     box-sizing: border-box;
@@ -14,23 +15,6 @@ div,
 header,
 section {
     font-size: 0;
-}
-
-.content-wrapper {
-    max-width: calc(#{$max-body-width} + #{$gutter} * 2);
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 $gutter;
-}
-
-.row {
-    max-width: calc(#{$max-body-width} + #{$gutter} * 2);
-    width: 100%;
-    margin: 0 auto;
-}
-
-.is-full-width {
-    max-width: 100%;
 }
 
 .footer {
