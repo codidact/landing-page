@@ -14,3 +14,15 @@
 .is-full-width {
     max-width: 100%;
 }
+
+@for $i from 1 through $max-column-count {
+    .has-#{$i}-columns {
+        display: grid;
+        grid-template-columns: repeat(#{$i}, 1fr);
+        grid-gap: $column-gutter;
+    }
+
+    .spans-#{$i}-columns {
+        grid-column: auto / span #{$i};
+    }
+}
