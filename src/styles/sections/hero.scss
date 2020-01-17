@@ -6,11 +6,15 @@
     .large-brand-mark {
         width: 40%;
         position: relative;
+        z-index: 1;
     }
 
     svg {
         width: 100%;
         height: auto;
+        top: 2px;
+        position: relative;
+        z-index: 0;
     }
 
     .hero__text {
