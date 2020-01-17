@@ -1,23 +1,22 @@
-$primary-font: "Red Hat Display", sans-serif;
-
-$has-normal-font-size: 18px; // this is defined as the root unit on the html element
-$has-small-font-size: 0.8rem;
-$has-medium-font-size: 2rem;
-$has-large-font-size: 3rem;
-$has-x-large-font-size: 5.2rem;
-
-$has-regular-weight: 400;
-$has-bold-weight: 700;
-$has-black-weight: 900;
-
 .heading {
     &--primary {
-        font-size: $has-x-large-font-size;
+        font-size: $has-large-font-size;
         font-weight: $has-black-weight;
-        letter-spacing: 2px;
+        letter-spacing: 1.2px;
         line-height: 1;
         margin: 0;
         padding: 0;
+
+        @include for-tablet-landscape-up {
+            font-size: $has-x-large-font-size--mobile;
+            letter-spacing: 1.2px;
+        }
+
+        @include for-desktop-up {
+            font-size: $has-x-large-font-size;
+            font-weight: $has-black-weight;
+            letter-spacing: 2px;
+        }
     }
 
     &--secondary {

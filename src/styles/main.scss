@@ -1,6 +1,7 @@
 @import "normalize.scss";
 @import "variables.scss";
 @import "grid.scss";
+@import "typography.scss";
 
 * {
     box-sizing: border-box;
@@ -27,3 +28,4 @@ section {
 
 @import "sections/header.scss";
 @import "sections/hero.scss";
+@import "sections/footer.scss";

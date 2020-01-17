@@ -18,8 +18,12 @@
 @for $i from 1 through $max-column-count {
     .has-#{$i}-columns {
         display: grid;
-        grid-template-columns: repeat(#{$i}, 1fr);
+        flex-direction: column;
         grid-gap: $column-gutter;
+
+        @include for-tablet-landscape-up {
+            grid-template-columns: repeat(#{$i}, 1fr);
+        }
     }
 
     .spans-#{$i}-columns {

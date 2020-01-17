@@ -16,7 +16,7 @@ $screensize-large-desktop: 1800px;
 }
 
 @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) {
+    @media screen and (min-width: 900px) {
         @content;
     }
 }
