@@ -2,4 +2,8 @@
     background-image: url("/assets/img/hero-bg.svg"), $color-gradient-alternate;
     background-repeat: no-repeat;
     background-size: cover;
+
+    .large-brand-mark {
+        width: 100%;
+    }
 }
