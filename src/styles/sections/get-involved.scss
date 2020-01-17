@@ -1,0 +1,40 @@
+.get-involved {
+    text-align: center;
+    padding: 100px 0;
+
+    > .container {
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: $column-gutter;
+    }
+
+    .heading--secondary {
+        margin-bottom: 100px;
+    }
+
+    .card {
+        header img {
+            width: 60px;
+            height: auto;
+        }
+
+        &.discourse img {
+            filter: invert(100%);
+            height: auto;
+            width: 60px;
+        }
+
+        &.discord img {
+            height: auto;
+            width: 70px;
+        }
+
+        &.wiki img {
+            height: auto;
+            width: 110px;
+            top: 8px;
+            position: relative;
+        }
+    }
+}

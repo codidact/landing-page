@@ -21,7 +21,7 @@
 
     &--secondary {
         font-size: $has-large-font-size;
-        font-weight: $has-black-weight;
+        font-weight: $has-regular-weight;
         margin: 0;
         padding: 0;
     }
@@ -39,4 +39,8 @@ p {
     font-weight: $has-regular-weight;
     margin: 0;
     padding: 0;
+}
+
+strong {
+    font-weight: $has-bold-weight;
 }
