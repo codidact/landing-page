@@ -5,14 +5,23 @@
 
     .large-brand-mark {
         width: 100%;
+        position: absolute;
+    }
+
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px 0;
     }
 
     .heading--primary {
         color: $color-white;
+        margin-bottom: 20px;
     }
 
     .heading--tertiary {
         color: $color-white;
-        margin: 10px 0;
+        margin-bottom: 5px;
     }
 }
