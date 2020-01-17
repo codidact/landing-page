@@ -2,9 +2,9 @@ $primary-font: "Red Hat Display", sans-serif;
 
 $has-normal-font-size: 18px; // this is defined as the root unit on the html element
 $has-small-font-size: 0.8rem;
-$has-medium-font-size: 1.4rem;
+$has-medium-font-size: 2rem;
 $has-large-font-size: 3rem;
-$has-x-large-font-size: 6rem;
+$has-x-large-font-size: 5.2rem;
 
 $has-regular-weight: 400;
 $has-bold-weight: 700;
@@ -14,20 +14,30 @@ $has-black-weight: 900;
     &--primary {
         font-size: $has-x-large-font-size;
         font-weight: $has-black-weight;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
     }
 
     &--secondary {
         font-size: $has-large-font-size;
         font-weight: $has-black-weight;
+        margin: 0;
+        padding: 0;
     }
 
     &--tertiary {
         font-size: $has-medium-font-size;
         font-weight: $has-regular-weight;
+        margin: 0;
+        padding: 0;
     }
 }
 
 p {
     font-size: $has-normal-font-size;
     font-weight: $has-regular-weight;
+    margin: 0;
+    padding: 0;
 }
