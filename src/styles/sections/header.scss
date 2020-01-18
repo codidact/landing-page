@@ -14,10 +14,38 @@
     .header__links {
         position: relative;
 
+        .header__link {
+            margin: 0 10px;
+            vertical-align: top;
+            position: relative;
+            top: 8px;
+        }
+
         img {
             height: 35px;
-            margin: 10px;
             width: auto;
+            position: relative;
+        }
+
+        .header__link:nth-child(2) {
+            margin-left: 16px;
+        }
+
+        .header__link:nth-child(3) {
+            top: 6px;
+            margin-right: 5px;
+
+            img {
+                height: 42px;
+            }
+        }
+
+        .header__link:nth-child(4) {
+            top: 5px;
+
+            img {
+                height: 45px;
+            }
         }
     }
 
