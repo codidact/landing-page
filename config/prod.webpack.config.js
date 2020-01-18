@@ -20,14 +20,19 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [{ loader: "style-loader" }, { loader: "css-loader" }, { loader: "sass-loader" }],
+                use: [
+                    { loader: "style-loader" },
+                    MiniCssExtractPlugin.loader,
+                    { loader: "css-loader" },
+                    { loader: "postcss-loader" },
+                    { loader: "sass-loader" },
+                ],
             },
         ],
     },
-    devServer: {
-        contentBase: ["./dist"],
-        port: 3000,
-    },
-    devtool: "cheap-eval-source-map",
-    watch: true,
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css",
+        }),
+    ],
 };
