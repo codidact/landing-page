@@ -8,7 +8,8 @@
         "stylelint": "stylelint \"src/styles/*.scss\"",
         "stylelint-fix": "stylelint \"src/styles/*.scss\" --fix",
         "remove-assets": "rimraf ./dist/assets/css && rimraf ./dist/assets/js && mkdirp ./dist/assets/css && mkdirp ./dist/assets/js",
-        "start": "npm run remove-assets && webpack-dev-server --config ./config/dev.webpack.config.js --mode development"
+        "start": "npm run remove-assets && webpack-dev-server --config ./config/dev.webpack.config.js --mode development",
+        "build": "npm run remove-assets && webpack --config ./config/prod.webpack.config.js --mode production"
     },
     "repository": {
         "type": "git",
