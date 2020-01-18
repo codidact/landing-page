@@ -23,9 +23,9 @@ module.exports = {
                 use: [
                     { loader: "style-loader" },
                     MiniCssExtractPlugin.loader,
-                    { loader: "css-loader" },
-                    { loader: "postcss-loader" },
-                    { loader: "sass-loader" },
+                    { loader: "css-loader", options: { sourceMap: true } },
+                    { loader: "postcss-loader", options: { sourceMap: true } },
+                    { loader: "sass-loader", options: { sourceMap: true } },
                 ],
             },
         ],
@@ -33,6 +33,8 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "assets/css/[name].css",
+            sourceMap: true,
         }),
     ],
+    devtool: "source-map",
 };
