@@ -27,11 +27,11 @@
             position: relative;
         }
 
-        .header__link:nth-child(2) {
+        .header__link.is-discourse {
             margin-left: 16px;
         }
 
-        .header__link:nth-child(3) {
+        .header__link.is-discord {
             top: 6px;
             margin-right: 5px;
 
@@ -40,7 +40,7 @@
             }
         }
 
-        .header__link:nth-child(4) {
+        .header__link.is-github {
             top: 5px;
 
             img {
