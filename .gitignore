@@ -3,3 +3,5 @@ node_modules
 .vscode
 dist/assets/css
 dist/assets/js
+dist/assets/fonts
+dist/assets/img
