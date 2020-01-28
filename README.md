@@ -9,6 +9,7 @@ A staging environment is available at https://codidact.github.io/landing-page *(
 
 -   Ensure node and npm are installed locally [(nvm recommended)](https://github.com/nvm-sh/nvm).
 -   Run `npm install` to install project dependencies.
+-   Run `npm run start` to start the front-end. This can be viewed by navigating to `localhost:3000` in your browser.
 
 ## Linting
 
