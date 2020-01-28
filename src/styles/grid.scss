@@ -1,3 +1,6 @@
+@import "_variables.scss";
+@import "_responsive.scss";
+
 .content-wrapper {
     max-width: calc(#{$max-body-width} + #{$gutter} * 2);
     width: 100%;
