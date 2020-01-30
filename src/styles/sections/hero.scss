@@ -1,0 +1,57 @@
+.row.hero {
+    background-image: url("/assets/img/hero-bg.svg"), $color-gradient-alternate;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .large-brand-mark {
+        width: 40%;
+        position: relative;
+        z-index: 1;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+        top: 2px;
+        position: relative;
+        z-index: 0;
+    }
+
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 0 20px 0;
+        text-align: center;
+    }
+
+    .hero__image {
+        text-align: center;
+    }
+
+    .heading--primary {
+        color: $color-white;
+        margin-bottom: 20px;
+    }
+
+    .heading--tertiary {
+        color: $color-white;
+        margin-bottom: 5px;
+    }
+
+    @include for-tablet-landscape-up {
+        .large-brand-mark {
+            position: absolute;
+            width: 100%;
+        }
+
+        .hero__text {
+            text-align: left;
+            padding: 80px 0;
+        }
+
+        .hero__image {
+            text-align: unset;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.content-wrapper {
+    max-width: calc(#{$max-body-width} + #{$gutter} * 2);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $gutter;
+}
+
+.row {
+    max-width: calc(#{$max-body-width} + #{$gutter} * 2);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.is-full-width {
+    max-width: 100%;
+}
+
+@for $i from 1 through $max-column-count {
+    .has-#{$i}-columns {
+        display: grid;
+        flex-direction: column;
+        grid-gap: $column-gutter;
+
+        @include for-tablet-landscape-up {
+            grid-template-columns: repeat(#{$i}, 1fr);
+        }
+    }
+
+    .spans-#{$i}-columns {
+        grid-column: auto / span #{$i};
+    }
+}

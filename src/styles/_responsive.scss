@@ -1,0 +1,34 @@
+$screensize-phone: 600px;
+$screensize-tablet: 900px;
+$screensize-desktop: 1200px;
+$screensize-large-desktop: 1800px;
+
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media screen and (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-large-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}

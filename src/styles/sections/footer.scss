@@ -1,0 +1,16 @@
+.footer {
+    text-align: center;
+    padding: 50px 0 60px 0;
+
+    img {
+        position: relative;
+        left: -4px;
+        margin-bottom: 10px;
+    }
+
+    .tagline {
+        color: $color-white;
+        font-size: 0.8rem;
+        font-weight: $has-regular-weight;
+    }
+}

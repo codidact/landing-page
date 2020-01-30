@@ -1,8 +1,13 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "font-family-name-quotes": "always-unless-keyword",
     "indentation": 4,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "font-family-name-quotes": "always-unless-keyword",
     "string-quotes": ["double", { "avoidEscape": false }]
-  }
+  },
+  "plugins": [
+    "stylelint-scss"
+  ]
 }
