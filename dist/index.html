@@ -245,13 +245,21 @@
                 </a>
             </div>
         </section>
-        <section class="row content-wrapper signup">
-            <div class="container">
-                <h4 class="heading--tertiary">Interested?</h4>
-                <p>
-                    Alternatively, if you're interested in Codidact and want to be notified as things progress, send an email to 
-                    <a class="subscribe" href="mailto:announcements-subscribe@codidact.org">announcements-subscribe@codidact.org</a> to subscribe to our mailing list
-                </p>
+        <section class="row content-wrapper what-is-codidact">
+            <h2 class="heading--secondary">Join our mailling list</h2>
+            <div>
+                <form class="js-form">
+                    <input
+                        type="email"
+                        class="js-email-input"
+                        name="mail-input"
+                    />
+                    <p class="js-error"></p>
+                    <div class="loader">
+                        <div class="bar"></div>
+                    </div>
+                    <button class="has-top-small-margin js-submit-button" disabled>Subscribe</button>
+                </form>
             </div>
         </section>
         <footer class="footer row is-full-width">
@@ -259,5 +267,6 @@
             <p class="tagline">The open source Q&A platform.</p>
         </footer>
         <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
     </body>
 </html>
