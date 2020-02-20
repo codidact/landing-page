@@ -77,8 +77,6 @@ input {
     color: $color-white;
     font-size: 20px;
     -webkit-appearance:none;
-    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.45);
-    -moz-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.45);
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.45);
     background: $button-backgound;
     outline: none;
@@ -90,12 +88,8 @@ button {
     border-radius: 20px;
     background: $button-backgound;
     display: block;
-    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.45);
-    -moz-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.45);
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.45);
     transition: 0.2s all ease;
-    -webkit-transition: 0.2s all ease;
-    -moz-transition: 0.2s all ease;
     font-size: 20px;
     will-change: opacity;
     color: white;
@@ -119,5 +113,5 @@ button:hover {
 @import "sections/what-is-codidact.scss";
 @import "sections/community-first.scss";
 @import "sections/signup.scss";
-@import "sections/mailling-list.scss";
+@import "sections/mailing-list.scss";
 @import "sections/footer.scss";
