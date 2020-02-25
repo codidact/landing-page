@@ -16,13 +16,17 @@ $pattern = '/^(?!(?:(?:\\x22?\\x5C[\\x00-\\x7E]\\x22?)|(?:\\x22?[^\\x5C\\x22]\\x
 /*
  * Constants for email credentials.
  * Makes it easy to edit the username, password, port, etc.
+ * LOAD from a env file that's in the root folder, the template can be found in
+ * .env.example file
  */
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 $constants = array(
-  "HOST" => "",
-  "USERNAME" => "",
-  "PASSWORD" => "",
-  "PORT" => 465,
-  "SET_FROM" => ""
+  "HOST" => $_ENV['HOST'],
+  "USERNAME" => $_ENV['USERNAME'],
+  "PASSWORD" => $_ENV['PASSWORD'],
+  "PORT" => (int)$_ENV['PORT'],
+  "SET_FROM" => $_ENV['SET_FROM']
 );
 
 if (!isset($_POST["mail_input"])) {
@@ -39,7 +43,7 @@ $responseString = "";
  * Server side email validation.
  */
 if (preg_match($pattern, $emailString) !== 1) {
-  $responseString = "please enter a email";
+  $responseString = "Please enter an email";
   echo $responseString;
   exit();
 }
