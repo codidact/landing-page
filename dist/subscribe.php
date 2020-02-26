@@ -26,7 +26,7 @@ $constants = array(
   "USERNAME" => $_ENV['USERNAME'],
   "PASSWORD" => $_ENV['PASSWORD'],
   "PORT" => (int)$_ENV['PORT'],
-  "SET_FROM" => $_ENV['SET_FROM']
+  "FROM" => $_ENV['FROM']
 );
 
 if (!isset($_POST["mail_input"])) {
@@ -68,7 +68,7 @@ try {
   /*
    * Email recipents.
    */
-  $mail->setFrom($constants["SET_FROM"]);
+  $mail->setFrom($constants["FROM"]);
   $mail->addAddress($emailString);
   //$mail->addReplyTo('info@example.com', 'Information');
   /*
