@@ -42,6 +42,6 @@ $(".js-submit-button").addEventListener("click", () => {
         httpRequest.open("POST", "subscribe.php", true);
         httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         httpRequest.send("mail_input=" + email);
-        $(".loader").style.display = "block";s
+        $(".loader").style.display = "block";
     }
 })
