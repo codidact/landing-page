@@ -70,7 +70,6 @@ try {
    */
   $mail->setFrom($constants["FROM"]);
   $mail->addAddress($emailString);
-  //$mail->addReplyTo('info@example.com', 'Information');
   /*
       Content section. Subject and body goes here.
    */
