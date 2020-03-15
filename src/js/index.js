@@ -7,11 +7,11 @@ const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\
 $(".js-email-input").addEventListener("keyup", (e) => {
     const email = e.target.value;
     if (!emailRegex.test(email)) {
-        $(".js-error").textContent = "Please enter a valid email";
+        $(".js-form-response").textContent = "Please enter a valid email";
         $(".js-submit-button").disabled = true;
     }
     else {
-        $(".js-error").textContent = "";
+        $(".js-form-response").textContent = "";
         $(".js-submit-button").disabled = false;
     }
 })
@@ -20,11 +20,11 @@ $(".js-form").addEventListener("submit", (e) => e.preventDefault());
 $(".js-submit-button").addEventListener("click", () => {
     const email = $(".js-email-input").value;
     if (!emailRegex.test(email)) {
-        $(".js-error").textContent = "Please enter a valid email";
+        $(".js-form-response").textContent = "Please enter a valid email";
         $(".js-submit-button").disabled = true;
     }
     else {
-        $(".js-error").textContent = "";
+        $(".js-form-response").textContent = "";
         $(".js-submit-button").disabled = false;
         let httpRequest;
         if (window.XMLHttpRequest) {
@@ -35,7 +35,7 @@ $(".js-submit-button").addEventListener("click", () => {
         }
         httpRequest.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                $(".js-error").innerHTML = this.responseText;
+                $(".js-form-response").innerHTML = this.responseText;
             }
             $(".loader").style.display = "none";
         }
