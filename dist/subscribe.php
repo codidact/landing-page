@@ -26,7 +26,8 @@ $constants = array(
   "USERNAME" => $_ENV['USERNAME'],
   "PASSWORD" => $_ENV['PASSWORD'],
   "PORT" => (int)$_ENV['PORT'],
-  "FROM" => $_ENV['FROM']
+  "FROM" => $_ENV['FROM'],
+  "DEBUG" => (int)$_ENV['DEBUG']
 );
 
 if (!isset($_POST["mail_input"])) {
@@ -51,7 +52,7 @@ try {
   /*
    * Server settings.
   */
-  $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+  $mail->SMTPDebug = $constants["DEBUG"]
   $mail->isSMTP();
   $mail->Host       = $constants["HOST"];
   $mail->SMTPAuth   = true;
@@ -64,7 +65,7 @@ try {
    * Should be turned on in production.
    * $mail->SMTPDebug  = false;
    */
-  
+
   /*
    * Email recipents.
    */
