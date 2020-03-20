@@ -52,7 +52,7 @@ try {
   /*
    * Server settings.
   */
-  $mail->SMTPDebug = $constants["DEBUG"]
+  $mail->SMTPDebug = $constants["DEBUG"];
   $mail->isSMTP();
   $mail->Host       = $constants["HOST"];
   $mail->SMTPAuth   = true;
