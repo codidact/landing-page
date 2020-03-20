@@ -14,14 +14,15 @@ $(".js-email-input").addEventListener("keyup", (e) => {
         $(".js-form-response").textContent = "";
         $(".js-submit-button").disabled = false;
     }
-})
-$(".js-form").addEventListener("submit", (e) => e.preventDefault());
+});
 
-$(".js-submit-button").addEventListener("click", () => {
+$(".js-form").addEventListener("submit", (ev) => {
     const email = $(".js-email-input").value;
     if (!emailRegex.test(email)) {
         $(".js-form-response").textContent = "Please enter a valid email";
         $(".js-submit-button").disabled = true;
+        ev.preventDefault();
+        return false;
     }
     else {
         $(".js-form-response").textContent = "";
