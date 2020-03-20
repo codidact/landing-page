@@ -7,7 +7,7 @@
         "lint": "npm run stylelint",
         "stylelint": "stylelint \"src/styles/*.scss\"",
         "stylelint-fix": "stylelint \"src/styles/*.scss\" --fix",
-        "remove-assets": "rimraf ./dist/assets/css && rimraf ./dist/assets/js && mkdirp ./dist/assets/css && mkdirp ./dist/assets/js",
+        "remove-assets": "rm -rf ./dist/assets/css && rm -rf ./dist/assets/js && mkdir -p ./dist/assets/css && mkdir -p ./dist/assets/js",
         "start": "npm run remove-assets && webpack-dev-server --config ./config/dev.webpack.config.js --mode development",
         "build": "npm run remove-assets && webpack --config ./config/prod.webpack.config.js --mode production"
     },
@@ -37,7 +37,7 @@
         "eslint-plugin-prettier": "^3.1.1",
         "mini-css-extract-plugin": "^0.9.0",
         "mkdirp": "^0.5.1",
-        "node-sass": "^4.13.0",
+        "node-sass": "^4.13.1",
         "postcss-loader": "^3.0.0",
         "prettier": "^1.19.1",
         "rimraf": "^3.0.0",
