@@ -1,6 +1,6 @@
 # codidact/landing-page
 
-The Codidact project landing page. It should contain a high-level overview of what the Codidact project is about, as well as references to resources such as the [forums](https://forum.codidact.org/), [Wiki](https://github.com/codidact/docs/wiki), and [chat](https://discord.gg/PSr9pmn).
+The Codidact project landing page. It should contain a high-level overview of what the Codidact project is about, as well as references to resources such as the  [Wiki](https://github.com/codidact/docs/wiki), [Meta](https://meta.codidact.com/), and [chat](https://discord.gg/PSr9pmn).
 
 This site is live at https://codidact.org.  
 A staging environment is available at https://codidact.github.io/landing-page *(deployed via [GitHub Pages](https://github.com/codidact/landing-page/deployments) based on the `gh-pages` branch)*.
