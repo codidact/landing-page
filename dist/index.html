@@ -263,6 +263,40 @@
                 </form>
             </div>
         </section>
+        <section class="row content-wrapper">
+            <h2 class="heading--secondary">Frequently Asked Questions</h2>
+            <div id="faq">
+                <!--script src="https://gist.github.com/ArtOfCode-/b6088cc5ad9c98d4dfa9f16e234a1f85.js"></script-->
+                <script>
+'use strict';
+
+var md_source_doc_location = 'https://gist.githubusercontent.com/ArtOfCode-/b6088cc5ad9c98d4dfa9f16e234a1f85/raw/62d44804cc453bdea3f193d02891316402b730b3/faq.md';
+
+function parse_md(input) {
+    // TODO
+    return input;  /* XXX must parse md to HTML */
+}
+
+var md_doc_XML_HTTP_request = new XMLHttpRequest();
+
+md_doc_XML_HTTP_request.onreadystatechange = function (data) {
+    if (data.target.readyState == 4 /* complete */) {
+        var response_text = data.target.responseText;
+        var parsed = parse_md(response_text);
+        var faq_div = document.querySelector('div#faq');
+        var pre = document.createElement('pre');  /* XXX replace preformatted for something else once md parsing is wired in */
+        pre.innerHTML = 'Feeding from ' + md_source_doc_location + ':\n\n' + parsed;  /* XXX */
+        pre.setAttribute('style', 'font-size: 8pt');  /* XXX remove once md parsing is wired in */
+        faq_div.appendChild(pre);
+    }
+}
+
+md_doc_XML_HTTP_request.open('GET', md_source_doc_location);
+
+md_doc_XML_HTTP_request.send();
+                </script>
+            </div>
+        </section>
         <footer class="footer row is-full-width">
             <img src="assets/img/logo-codidact-white.svg" class="footer__logo" alt="Codidact logo" width="170" />
             <p class="tagline">The open source Q&amp;A platform.</p>
