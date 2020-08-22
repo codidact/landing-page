@@ -39,6 +39,9 @@
             })();
         </script>
         <!-- End Matomo Code -->
+
+        <!-- Markdown -->
+        <script src="https://cdn.rawgit.com/showdownjs/showdown/1.9.1/dist/showdown.min.js"></script>
     </head>
 
     <body>
@@ -273,8 +276,9 @@
 var md_source_doc_location = 'https://gist.githubusercontent.com/ArtOfCode-/b6088cc5ad9c98d4dfa9f16e234a1f85/raw/62d44804cc453bdea3f193d02891316402b730b3/faq.md';
 
 function parse_md(input) {
-    // TODO
-    return input;  /* XXX must parse md to HTML */
+    var converter = new showdown.Converter();
+    var html = converter.makeHtml(input);
+    return html;
 }
 
 var md_doc_XML_HTTP_request = new XMLHttpRequest();
@@ -284,10 +288,9 @@ md_doc_XML_HTTP_request.onreadystatechange = function (data) {
         var response_text = data.target.responseText;
         var parsed = parse_md(response_text);
         var faq_div = document.querySelector('div#faq');
-        var pre = document.createElement('pre');  /* XXX replace preformatted for something else once md parsing is wired in */
-        pre.innerHTML = 'Feeding from ' + md_source_doc_location + ':\n\n' + parsed;  /* XXX */
-        pre.setAttribute('style', 'font-size: 8pt');  /* XXX remove once md parsing is wired in */
-        faq_div.appendChild(pre);
+        var span = document.createElement('span');
+        span.innerHTML = parsed;
+        faq_div.appendChild(span);
     }
 }
 
