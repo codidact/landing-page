@@ -76,19 +76,19 @@ input {
     min-width: 300px;
     color: $color-black;
     font-size: 20px;
-    -webkit-appearance:none;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.45);
+    -webkit-appearance: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
     background: white;
     outline: none;
 }
 
 button {
     padding: 10px 20px 10px 20px;
-    -webkit-appearance:none;
+    -webkit-appearance: none;
     border-radius: 20px;
     background: $button-background;
     display: block;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
     transition: 0.2s all ease;
     font-size: 20px;
     will-change: opacity;
@@ -106,13 +106,14 @@ button:disabled {
 }
 
 button:hover {
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
 }
 
 div#faq {
     h1 {
-        font-size: 0px;
+        display: none;
     }
+
     h2 {
         font-size: 20px;
     }
