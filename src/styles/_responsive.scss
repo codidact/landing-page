@@ -9,6 +9,12 @@ $screensize-large-desktop: 1800px;
     }
 }
 
+@mixin for-image-adjustments {
+    @media (max-width: 800px) {
+        @content;
+    }
+}
+
 @mixin for-tablet-portrait-up {
     @media (min-width: 600px) {
         @content;

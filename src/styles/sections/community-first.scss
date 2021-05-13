@@ -1,34 +1,58 @@
 .community-first {
-    background: linear-gradient(108.53deg, #01c2ff 11.38%, #8c1aff 86.52%);
-    display: inline-block;
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+    background: $color-blue;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
 
-    .content-wrapper {
-        max-width: 700px;
-        margin: 100px auto;
-        position: relative;
-        left: 0;
+    .community-first--container {
+        max-width: 50%;
 
-        @include for-tablet-landscape-up {
-            left: 10%;
+        @include for-image-adjustments {
+            max-width: 80%;
         }
     }
 
     .heading--secondary {
-        margin: 0 0 30px 0;
+        margin: 40px 0 30px 0;
         color: $color-white;
     }
 
     p {
         color: $color-white;
+        width: 100%;
+        a {
+            color: $color-black;
+        }
+    }
+
+    img {
+        @include for-image-adjustments {
+            display: none;
+        }
+
+        margin-right: 20px;
+        width: 30%;
     }
 }
 
 .call-to-action {
-    max-width: 700px;
-    margin: 100px auto 0 auto;
-    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    background: $color-light-blue;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
-    p {
-        margin-bottom: 20px;
+    .call-to-action--container {
+        max-width: 700px;
+        position: relative;
+        display: block;
+        margin: 0px auto;
+
+        p {
+            color: $color-white;
+            margin-bottom: 20px;
+        }
     }
 }
