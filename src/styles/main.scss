@@ -10,6 +10,12 @@
 html {
     font-family: $primary-font;
     font-size: $has-normal-font-size;
+    background-color: rgb(229, 229, 229);
+}
+
+a {
+    color: $color-blue;
+    text-decoration: none;
 }
 
 div,
@@ -88,7 +94,6 @@ button {
     border-radius: 20px;
     background: $button-background;
     display: block;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
     transition: 0.2s all ease;
     font-size: 20px;
     will-change: opacity;
@@ -103,10 +108,6 @@ button:disabled {
     pointer-events: none;
     cursor: not-allowed;
     transition: none;
-}
-
-button:hover {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
 }
 
 div#faq {
@@ -126,5 +127,6 @@ div#faq {
 @import "sections/what-is-codidact.scss";
 @import "sections/community-first.scss";
 @import "sections/signup.scss";
+@import "sections/faq.scss";
 @import "sections/mailing-list.scss";
 @import "sections/footer.scss";
