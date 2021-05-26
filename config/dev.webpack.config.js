@@ -25,7 +25,6 @@ module.exports = {
     devServer: {
         contentBase: ["./dist"],
         port: 3000,
-        host: "192.168.29.46",
     },
     devtool: "cheap-eval-source-map",
     watch: true,
