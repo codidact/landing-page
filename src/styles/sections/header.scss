@@ -25,10 +25,15 @@
         vertical-align: top;
         margin-top: 10px;
         margin-left: 2%;
+        justify-content: space-evenly;
 
         @include for-image-adjustments {
             width: 100%;
             text-align: center;
+            margin-top: 40px;
+            margin-left: 0;
+            display: flex;
+            justify-content: space-evenly;
         }
 
         a {
@@ -37,6 +42,10 @@
             text-decoration: none;
             position: relative;
             color: $color-black;
+
+            @include for-image-adjustments {
+                margin-left: 0px;
+            }
 
             &:before {
                 content: "";

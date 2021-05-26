@@ -7,6 +7,10 @@
         left: -10%;
     }
 
+    @include for-phone-only {
+        margin-top: 0;
+    }
+
     div {
         height: fit-content;
         max-width: 500px;

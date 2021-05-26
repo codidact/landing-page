@@ -89,6 +89,8 @@ input {
 }
 
 button {
+    /* iOS button padding bug fix */
+    padding: 0;
     padding: 10px 20px 10px 20px;
     -webkit-appearance: none;
     border-radius: 20px;
