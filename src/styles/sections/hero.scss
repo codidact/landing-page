@@ -20,7 +20,10 @@
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
         width: 90%;
+<<<<<<< HEAD
         grid-auto-rows: 1fr;
+=======
+>>>>>>> master
         height: 100%;
 
         .grid--hero-text {
@@ -69,8 +72,13 @@
 
             img {
                 position: relative;
+<<<<<<< HEAD
                 right: -10%;
                 width: 100%;
+=======
+                right: -100px;
+                width: 105%;
+>>>>>>> master
             }
         }
     }

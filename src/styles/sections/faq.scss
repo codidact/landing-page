@@ -30,14 +30,19 @@
 				width: 50px;
 				height: 50px;
 				float: right;
+<<<<<<< HEAD
 				display: -webkit-box;
 				-webkit-box-orient: horizontal;
+=======
+				display: flex;
+>>>>>>> master
 				position: absolute;
 				right: 20px;
 				bottom: -20px;
 				justify-content: center;
 				vertical-align: middle;
 
+<<<<<<< HEAD
 				img {
 					filter: invert(100%);
 					transition: 0.3s all ease;
@@ -47,6 +52,10 @@
 			button.opened {
 				img {
 					transform: rotate(180deg);
+=======
+				svg {
+					width: 100%;
+>>>>>>> master
 				}
 			}
 

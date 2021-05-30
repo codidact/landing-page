@@ -1,11 +1,18 @@
 import "../styles/main.scss";
 
+<<<<<<< HEAD
 const $ = (selector) => document.querySelector(selector);
 const create = (element) => document.createElement(element);
 const docLoc = "https://raw.githubusercontent.com/codidact/docs/master/User-Help/CodidactMainPageFAQ.md";
+=======
+const $ = selector => document.querySelector(selector);
+const create = element => document.createElement(element);
+const docLoc = "https://raw.githubusercontent.com/codidact/docs/master/User-Help/CodidactMainPageFAQ.md";
+const svgButtonArrow = `<svg mlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="button-expand"><path fill="currentColor" d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"></path></svg>`;
+>>>>>>> master
 const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-$(".js-email-input").addEventListener("keyup", (e) => {
+$(".js-email-input").addEventListener("keyup", e => {
     const email = e.target.value;
     if (!emailRegex.test(email)) {
         $(".js-form-response").textContent = "Please enter a valid email";
@@ -16,7 +23,7 @@ $(".js-email-input").addEventListener("keyup", (e) => {
     }
 });
 
-$(".js-form").addEventListener("submit", (ev) => {
+$(".js-form").addEventListener("submit", ev => {
     const email = $(".js-email-input").value;
     if (!emailRegex.test(email)) {
         $(".js-form-response").textContent = "Please enter a valid email";
@@ -52,6 +59,7 @@ function parseMD(input) {
 
 const docReq = new XMLHttpRequest();
 
+<<<<<<< HEAD
 docReq.onreadystatechange = (data) => {
     if (data.target.readyState !== 4) {
         return;
@@ -90,6 +98,38 @@ docReq.onreadystatechange = (data) => {
         div.append(answer);
         faqDiv.appendChild(div);
     });
+=======
+docReq.onreadystatechange = data => {
+    if (data.target.readyState == 4) {
+        let parsed = parseMD(data.target.responseText);
+        const parser = new DOMParser();
+        let htmlDoc = parser.parseFromString(parsed, "text/html");
+        [...htmlDoc.querySelectorAll("h2")].forEach(question => {
+            const faqDiv = $("div#faq");
+            const div = create("div");
+            div.className = "question";
+            const questionHeading = create("h2");
+            questionHeading.innerHTML = question.innerHTML;
+            questionHeading.className = "heading--secondary";
+            const button = create("button");
+            button.innerHTML = svgButtonArrow;
+            const answer = create("div");
+            answer.className = "question--answer";
+            button.addEventListener("click", e => {
+                if (answer.classList.contains("show")) {
+                    answer.classList.remove("show");
+                } else {
+                    answer.classList.add("show");
+                }
+            });
+            div.append(questionHeading);
+            div.append(button);
+            answer.innerHTML = `<p> ${question.nextElementSibling.innerHTML} </p>`;
+            div.append(answer);
+            faqDiv.appendChild(div);
+        });
+    }
+>>>>>>> master
 };
 
 docReq.open("GET", docLoc);

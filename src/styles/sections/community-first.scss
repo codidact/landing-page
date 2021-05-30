@@ -1,4 +1,8 @@
 .community-first {
+<<<<<<< HEAD
+=======
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+>>>>>>> master
     background: $color-blue;
     display: flex;
     position: relative;
@@ -10,7 +14,11 @@
         max-width: 50%;
 
         @include for-image-adjustments {
+<<<<<<< HEAD
             max-width: 90%;
+=======
+            max-width: 80%;
+>>>>>>> master
         }
     }
 
@@ -23,8 +31,12 @@
         color: $color-white;
         width: 100%;
         a {
+<<<<<<< HEAD
             color: $color-white;
             text-decoration: underline;
+=======
+            color: $color-black;
+>>>>>>> master
         }
     }
 
