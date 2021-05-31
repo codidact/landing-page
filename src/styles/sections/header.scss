@@ -3,73 +3,69 @@
 .header {
     padding-bottom: $gutter;
     padding-top: $gutter;
-    text-align: center;
+    position: absolute;
 
-    .header__links,
-    .header__logo {
+    .links,
+    .logo {
+        position: relative;
+        z-index: 10;
+    }
+
+    .logo {
+        @include for-image-adjustments {
+            display: block;
+            margin: 0px auto;
+            margin-bottom: 10px;
+        }
+    }
+
+    .links {
+        display: inline-block;
+        height: 100%;
         vertical-align: top;
-        position: relative;
-    }
+        margin-top: 10px;
+        margin-left: 2%;
+        justify-content: space-evenly;
 
-    .header__links {
-        position: relative;
+        @include for-image-adjustments {
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+            margin-left: 0;
+            display: flex;
+            justify-content: space-evenly;
+        }
 
-        .header__link {
-            margin: 0 10px;
-            vertical-align: top;
+        a {
+            margin-left: 50px;
+            font-size: 20px;
+            text-decoration: none;
             position: relative;
-            top: 8px;
-        }
+            color: $color-black;
 
-        img {
-            height: 35px;
-            width: auto;
-            position: relative;
-        }
-
-        .header__link.is-discourse {
-            margin-left: 16px;
-        }
-
-        .header__link.is-meta {
-            margin-left: 16px;
-        }
-
-        .header__link.is-discord {
-            top: 6px;
-            margin-right: 5px;
-
-            img {
-                height: 42px;
+            @include for-image-adjustments {
+                margin-left: 0px;
             }
-        }
 
-        .header__link.is-github {
-            top: 5px;
-
-            img {
-                height: 45px;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #2F80ED;
+                visibility: visible;
+                transition: all 0.3s ease-in-out;
             }
-        }
-    }
 
-    .header__logo {
-        height: auto;
-        width: 180px;
-    }
-
-    @include for-tablet-landscape-up {
-        text-align: left;
-
-        .header__links,
-        .header__logo {
-            display: inline-block;
-            margin: 0;
-        }
-
-        .header__links {
-            float: right;
-            top: -6px;
+            &:hover {
+                &:before {
+                    visibility: hidden;
+                    width: 0;
+                }
+            }
         }
     }
 }

@@ -1,15 +1,30 @@
 .what-is-codidact {
-    max-width: 700px;
-    margin: 30px auto 150px auto;
-    position: relative;
-    left: 0;
+    margin: 50px auto 80px auto;
+    display: flex;
+    justify-content: center;
 
     @include for-tablet-landscape-up {
         left: -10%;
     }
 
-    .heading--secondary {
-        color: $color-blue;
-        margin: 0 0 30px 0;
+    @include for-phone-only {
+        margin-top: 0;
+    }
+
+    div {
+        height: fit-content;
+        max-width: 500px;
+
+        .heading--secondary {
+            color: $color-blue;
+            margin: 0 0 30px 0;
+        }
+    }
+
+    img {
+        @include for-image-adjustments {
+            display: none;
+        }
+        width: 40%;
     }
 }

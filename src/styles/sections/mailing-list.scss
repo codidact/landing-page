@@ -1,6 +1,48 @@
-.js-form button, .js-error  {
-    margin-top: 20px;
-}
-.js-error, .js-form-response {
-    color: $color-warning;
+.mailing-list {
+	width: 100%;
+	padding: 20px;
+	padding-bottom: 100px;
+	padding-top: 100px;
+	background: $color-light-blue;
+
+	h4 {
+		margin-bottom: 20px;
+		color: $color-white;
+	}
+
+	.list--container {
+		display: block;
+		margin: 0px auto;
+		max-width: 700px;
+		text-align: left;
+		position: relative;
+
+		div {
+			.js-form button, .js-error  {
+    			margin-top: 20px;
+			}
+
+			.js-error, .js-form-response {
+    			color: $color-warning;
+			}
+
+			.js-form {
+				.js-email-input {
+					max-width: 400px;
+				}
+			}
+
+		}
+
+		img {
+			@include for-phone-only {
+				display: none;
+			}
+
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 25%;
+		}
+	}
 }

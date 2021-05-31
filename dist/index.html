@@ -12,10 +12,13 @@
         <link rel="manifest" href="site.webmanifest" />
         <link rel="apple-touch-icon" href="icon.png" />
 
+        <!-- Red Hat font -->
         <link
             href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,700,900&display=swap"
             rel="stylesheet"
         />
+
+        <!-- Custom css file -->
         <link rel="stylesheet" href="assets/css/main.css" />
 
         <!-- Matomo -->
@@ -51,102 +54,87 @@
                 <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
             </p>
         <![endif]-->
-        <header class="header row is-full-width">
+        <header class="header content-wrapper row is-full-width">
             <div class="content-wrapper is-full-width">
-                <img src="assets/img/logo-codidact.svg" class="header__logo" alt="Codidact logo" width="170" />
-                <div class="header__links">
+                <img src="assets/img/logo-codidact.svg" class="logo" alt="Codidact logo" width="170" />
+                <div class="links">
                     <a
-                        class="link header__link is-wiki"
                         href="https://github.com/codidact/docs/wiki"
                         target="_blank"
                         title="Wiki"
                     >
-                        <img
-                            src="assets/img/3rd-party/logo-wiki.png"
-                            class="link__logo"
-                            alt="Wiki logo"
-                            width="46"
-                            height="46"
-                        />
+                        Wiki
                     </a>
                     <a
-                        class="link header__link is-meta"
                         href="https://meta.codidact.com"
                         target="_blank"
                         title="Meta (Q&A)"
                     >
-                        <img
-                            src="assets/img/3rd-party/logo-meta.png"
-                            class="link__logo"
-                            alt="Meta logo"
-                            height="46"
-                        />
+                        Meta
                     </a>
                     <a
-                        class="link header__link is-discord"
                         href="https://discord.gg/WZ7aTst"
                         target="_blank"
                         title="Discord (chat)"
                     >
-                        <img
-                            src="assets/img/3rd-party/logo-discord-chat.png"
-                            class="link__logo"
-                            alt="Discord logo"
-                            width="46"
-                            height="46"
-                        />
+                        Discord
                     </a>
                     <a
-                        class="link header__link is-github"
                         href="https://github.com/codidact"
                         target="_blank"
                         title="GitHub"
                     >
-                        <img
-                            src="assets/img/3rd-party/logo-github.png"
-                            class="link__logo"
-                            alt="Github logo"
-                            width="46"
-                            height="46"
-                        />
+                        Github
                     </a>
                 </div>
             </div>
         </header>
-        <section class="row is-full-width hero">
-            <div class="content-wrapper has-2-columns">
-                <div class="container hero__text">
-                    <h1 class="heading--primary">The Open Source Q&amp;A Platform.</h1>
-                    <p class="heading--tertiary">For the community.</p>
-                    <p class="heading--tertiary">By the community.</p>
-                    <p class="heading--tertiary"><a href="https://codidact.com/">Join our communities</a></p>
-                </div>
-                <div class="container hero__image">
-                    <img src="assets/img/brand-mark.svg" class="large-brand-mark" alt="large Codidact brand mark" />
-                </div>
-            </div>
+        <section class="row content-wrapper is-full-width hero">
             <svg
-                class="hero--angle"
-                width="1439"
-                height="160"
-                viewBox="0 0 1440 160"
+                class="semi-circle"
+                viewBox="0 0 630 1024"
                 fill="none"
+                alt="Big semicirle decoration"
                 xmlns="http://www.w3.org/2000/svg"
             >
-                <path d="M0 0L1440 160H0V0Z" fill="white" />
+                <path d="M0 517.095C0 852.832 282.061 1125 630 1125V-80C282.061 -80 0 181.359 0 517.095Z" fill="#2F80ED" />
             </svg>
+            <div class="grid--hero">
+                <div class="grid--hero-text">
+                    <h1 class="heading--primary">
+                        The Open
+                        <br>
+                        Source Q&amp;A
+                        <br> Platform.
+                    </h1>
+                    <button
+                        label="Join Codidact"
+                        type="button"
+                        onclick="location.href='https://codidact.com/'"
+                    >
+                        Join Us
+                    </button>
+                </div>
+                <div class="grid--hero--big">
+                    <img alt="Codidact logo (big)" src="assets/img/brand-mark.svg">
+                </div>
+            </div>
         </section>
         <section class="row content-wrapper what-is-codidact">
-            <h2 class="heading--secondary">What is Codidact?</h2>
-            <p>
-                <strong>Ever had a question? Ever had an answer? Ever had knowledge to share?</strong>
-                We believe that coming together to inquire and learn, to share knowledge and to teach each other,
-                makes the world a better place. We also believe that Q&amp;A communities should be free from the politics
-                and shenanigans of private, profit-focused companies.
-            </p>
+            <div>
+                <h2 class="heading--secondary">What is Codidact?</h2>
+                <p>
+                    <strong>Ever had a question? Ever had an answer? Ever had knowledge to share?</strong>
+                    We believe that coming together to inquire and learn, to share knowledge and to teach each other,
+                    makes the world a better place. We also believe that Q&amp;A communities should be free from the politics
+                    and shenanigans of private, profit-focused companies.
+                </p>
+            </div>
+            <img alt="Searching illustration" src="assets/img/3rd-party/searching.svg">
         </section>
         <section class="row is-full-width community-first">
-            <div class="content-wrapper">
+            <img alt="Community illustration" src="assets/img/3rd-party/community.svg">
+            <div class="community-first--container">
                 <h3 class="heading--secondary">Community First</h3>
                 <p>
                     We're building an open-source platform for community-driven Q&amp;A sites.
@@ -160,16 +148,18 @@
                 </p>
             </div>
         </section>
-        <section class="row content-wrapper call-to-action">
-            <p>
-                Ultimately, we are all looking for answers to life's big &mdash; and little &mdash; questions.
-                We're building an amazing platform that makes it easier to ask questions
-                and curate answers in a non-hostile environment,
-                so you can get to the answers you need, without the fuss.
-            </p>
-            <p>
-                <strong>Whether it’s a question about Python or pythons, we want Codidact to have you covered.</strong>
-            </p>
+        <section class="row content-wrapper is-full-width call-to-action">
+            <div class="call-to-action--container">
+                <p>
+                    Ultimately, we are all looking for answers to life's big &mdash; and little &mdash; questions.
+                    We're building an amazing platform that makes it easier to ask questions
+                    and curate answers in a non-hostile environment,
+                    so you can get to the answers you need, without the fuss.
+                </p>
+                <p>
+                    <strong>Whether it’s a question about Python or pythons, we want Codidact to have you covered.</strong>
+                </p>
+            </div>
         </section>
         <section class="row content-wrapper get-involved">
             <h3 class="heading--secondary">Get Involved</h3>
@@ -253,55 +243,29 @@
                 </a>
             </div>
         </section>
-        <section class="row content-wrapper what-is-codidact">
-            <h2 class="heading--secondary">Join our mailing list</h2>
-            <div>
-                <form class="js-form" action="subscribe.php" method="POST">
-                    <input
-                        type="email"
-                        class="js-email-input"
-                        name="mail_input"
-                           placeholder="email@example.com"
-                    />
-                    <p class="js-form-response"></p>
-                    <div class="loader">
-                        <div class="bar"></div>
-                    </div>
-                    <button class="has-top-small-margin js-submit-button" disabled>Subscribe</button>
-                </form>
-            </div>
+        <section class="row is-full-width faq">
+            <h2 class="heading--secondary heading--faq">Frequently Asked Questions</h2>
+            <div id="faq"></div>
         </section>
-        <section class="row content-wrapper">
-            <h2 class="heading--secondary">Frequently Asked Questions</h2>
-            <div id="faq">
-                <!--script src="https://gist.github.com/ArtOfCode-/b6088cc5ad9c98d4dfa9f16e234a1f85.js"></script-->
-                <script>
-'use strict';
-
-const md_source_doc_location = 'https://raw.githubusercontent.com/codidact/docs/master/User-Help/CodidactMainPageFAQ.md';
-
-function parse_md(input) {
-    const converter = new showdown.Converter();
-    return converter.makeHtml(input);
-}
-
-const md_doc_XML_HTTP_request = new XMLHttpRequest();
-
-md_doc_XML_HTTP_request.onreadystatechange = function (data) {
-    if (data.target.readyState == 4 /* complete */) {
-        const response_text = data.target.responseText;
-        const parsed = parse_md(response_text);
-        const faq_div = document.querySelector('div#faq');
-        const span = document.createElement('span');
-        span.innerHTML = parsed;
-        faq_div.appendChild(span);
-    }
-}
-
-md_doc_XML_HTTP_request.open('GET', md_source_doc_location);
-
-md_doc_XML_HTTP_request.send();
-                </script>
+        <section class="row is-full-width mailing-list">
+            <div class="list--container">
+                <h4 class="heading--tertiary">Join our mailing list</h4>
+                <div>
+                    <form class="js-form" action="subscribe.php" method="POST">
+                        <input
+                            type="email"
+                            class="js-email-input"
+                            name="mail_input"
+                            placeholder="email@example.com"
+                        />
+                        <p class="js-form-response"></p>
+                        <div class="loader">
+                            <div class="bar"></div>
+                        </div>
+                        <button label="Subscribe to mailing list" class="has-top-small-margin js-submit-button" disabled>Subscribe</button>
+                    </form>
+                </div>
+                <img alt="MailBox illustration" src="assets/img/3rd-party/mailbox.svg">
             </div>
         </section>
         <footer class="footer row is-full-width">
