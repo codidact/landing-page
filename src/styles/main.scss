@@ -103,14 +103,18 @@ button {
     cursor: pointer;
     border: none;
     outline: none;
-}
 
-button:disabled {
-    opacity: 0.3;
-    box-shadow: none;
-    pointer-events: none;
-    cursor: not-allowed;
-    transition: none;
+    &:disabled {
+        opacity: 0.3;
+        box-shadow: none;
+        pointer-events: none;
+        cursor: not-allowed;
+        transition: none;
+    }
+
+    &:hover {
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 div#faq {
