@@ -18,14 +18,26 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [{ loader: "style-loader" }, { loader: "css-loader" }, { loader: "sass-loader" }],
+                use: [
+                    {
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            implementation: require("sass"),
+                        },
+                    },
+                ],
             },
         ],
     },
     devServer: {
-        contentBase: ["./dist"],
+        static: ["./dist"],
         port: 3000,
     },
-    devtool: "cheap-eval-source-map",
-    watch: true,
+    devtool: "eval-nosources-cheap-source-map",
 };
