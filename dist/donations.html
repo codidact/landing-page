@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8" />
-        <title>Codidact - Helping each other learn.</title>
+        <title>Codidact - Supported by these generous donors</title>
         <meta
             name="description"
             content="Codidact is an open-source, community-controlled Q&amp;A platform. Currently under active development. Contribute by joining our team."
@@ -56,7 +56,8 @@
         <![endif]-->
         <header class="header content-wrapper row is-full-width">
             <div class="content-wrapper is-full-width">
-                <img src="assets/img/logo-codidact.svg" class="logo" alt="Codidact logo" width="170" />
+              <a href="./index.html">
+		<img src="assets/img/logo-codidact.svg" class="logo" alt="Codidact logo" width="170" /></a>
                 <div class="links">
                     <a
                         href="https://github.com/codidact/docs/wiki"
@@ -101,37 +102,44 @@
             </svg>
             <div class="grid--hero">
                 <div class="grid--hero-text">
-                    <h1 class="heading--primary">
-                        The Open
-                        <br>
-                        Source Q&amp;A
-                        <br> Platform.
+                    <h1 class="heading--primary">Thank you to
+		      our generous donors!
                     </h1>
-                    <button
-                        label="Join Codidact"
-                        type="button"
-                        onclick="location.href='https://codidact.com/'"
-                    >
-                        Visit our communities
-                    </button>
                 </div>
                 <div class="grid--hero--big">
                     <img alt="Codidact logo (big)" src="assets/img/brand-mark.svg">
                 </div>
             </div>
         </section>
-        <section class="row content-wrapper what-is-codidact">
-            <div>
-                <h2 class="heading--secondary">What is Codidact?</h2>
-                <p>
-                    <strong>Ever had a question? Ever had an answer? Ever had knowledge to share?</strong>
-                    We believe that coming together to inquire and learn, to share knowledge and to teach each other,
-                    makes the world a better place. We also believe that Q&amp;A communities should be free from the politics
-                    and shenanigans of private, profit-focused companies.
-                </p>
-            </div>
-            <img alt="Searching illustration" src="assets/img/3rd-party/searching.svg">
+        <section class="row content-wrapper is-full-width donors">
+          <div>
+	    <p>We thank the many generous donors who support The Codidact Foundation and the network of communities at codidact.com, including:</p>
+	    <h3 class="heading--secondary">Ongoing</h3>
+	    <p><a href="https://github.com/codidact">Github sponsor:</a> Shog9</p>
+	    <h3 class="heading--secondary">2022</h3>
+	    <table>
+	      <tr><th>Donor</th><th>Optional Message</th></tr>
+	      <tr><td>Alexei</td><td>:)</td></tr>
+	      <tr><td>Erik Darling</td><td></td></tr>
+	    </table>
+            <h3 class="heading--secondary">2021</h3>
+	    <table>
+	      <tr><th>Donor</th><th>Optional Message</th></tr>
+	      <tr><td>Ullallulloo</td><td></td></tr>
+	      <tr><td>Alexei</td><td>Good luck!</td></tr>
+	    </table>
+	    <p>We are also grateful to several donors who have chosen to remain anonymous.</p>
+	    <p><br/>Like what we're doing?</p>
+	    <button
+              label="Donate"
+              type="button"
+              onclick="location.href='https://meta.codidact.com/donate'"
+              >
+	      Donate
+            </button>
+          </div>
         </section>
+
         <section class="row is-full-width community-first">
             <img alt="Community illustration" src="assets/img/3rd-party/community.svg">
             <div class="community-first--container">
@@ -146,23 +154,9 @@
                     Our non-profit organization, The Codidact Foundation, is made up people directly from our communities, located in countries all over the world. We're incorporated in the United Kingdom as a Community Interest Company (CIC), with plans to become a Charitable Incorporated Organisation (CIO) in the future.
                     The organization exists in order to provide a central focal point for processing costs and donations, including opening and maintaining a bank account. You can read more at <a href="https://meta.codidact.com/posts/279384">our initial announcement</a>.
                 </p>
-		<!-- TODO: I don't understand why there's no spacing between these paragaphs without the br; must be something in the CSS. -->
-		<p><br/>The Codidact Foundation is supported by <a href="./donations.html">generous donors</a>.</p>
             </div>
         </section>
-        <section class="row content-wrapper is-full-width call-to-action">
-            <div class="call-to-action--container">
-                <p>
-                    Ultimately, we are all looking for answers to life's big &mdash; and little &mdash; questions.
-                    We're building an amazing platform that makes it easier to ask questions
-                    and curate answers in a non-hostile environment,
-                    so you can get to the answers you need, without the fuss.
-                </p>
-                <p>
-                    <strong>Whether it’s a question about Python or pythons, we want Codidact to have you covered.</strong>
-                </p>
-            </div>
-        </section>
+
         <section class="row content-wrapper get-involved">
             <h3 class="heading--secondary">Get Involved</h3>
             <div class="container">
@@ -245,31 +239,7 @@
                 </a>
             </div>
         </section>
-        <section class="row is-full-width faq">
-            <h2 class="heading--secondary heading--faq">Frequently Asked Questions</h2>
-            <div id="faq"></div>
-        </section>
-        <section class="row is-full-width mailing-list">
-            <div class="list--container">
-                <h4 class="heading--tertiary">Join our mailing list</h4>
-                <div>
-                    <form class="js-form" action="subscribe.php" method="POST">
-                        <input
-                            type="email"
-                            class="js-email-input"
-                            name="mail_input"
-                            placeholder="email@example.com"
-                        />
-                        <p class="js-form-response"></p>
-                        <div class="loader">
-                            <div class="bar"></div>
-                        </div>
-                        <button label="Subscribe to mailing list" class="has-top-small-margin js-submit-button" disabled>Subscribe</button>
-                    </form>
-                </div>
-                <img alt="MailBox illustration" src="assets/img/3rd-party/mailbox.svg">
-            </div>
-        </section>
+
         <footer class="footer row is-full-width">
             <img src="assets/img/logo-codidact-white.svg" class="footer__logo" alt="Codidact logo" width="170" />
             <p class="tagline">The open source Q&amp;A platform.</p>
