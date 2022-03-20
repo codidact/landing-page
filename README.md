@@ -11,6 +11,14 @@ A staging environment is available at https://codidact.github.io/landing-page *(
 -   Run `npm install` to install project dependencies.
 -   Run `npm run start` to start the front-end. This can be viewed by navigating to `localhost:3000` in your browser.
 
+## Build outputs are part of the repo
+
+After you make changes, build:
+
+`npm run build`
+
+This should make changes in `dist`.  Include those in your commit.
+
 ## Linting
 
 Whilst CI tools will be used at a later date, before submitting a PR ensure your code is linted by running `npm run lint`. Any submitted PRs will be rejected if linting does not pass.
