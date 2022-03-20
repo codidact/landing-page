@@ -18,12 +18,6 @@ a {
     text-decoration: none;
 }
 
-div,
-header,
-section {
-    font-size: 0;
-}
-
 .container {
     position: relative;
 }
@@ -137,3 +131,4 @@ div#faq {
 @import "sections/faq.scss";
 @import "sections/mailing-list.scss";
 @import "sections/footer.scss";
+@import "sections/donors.scss";
