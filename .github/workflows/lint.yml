@@ -1,6 +1,7 @@
 on:
   pull_request:
     types: [opened, synchronize]
+name: Lint pull request
 jobs:
   lint:
     name: Lint
