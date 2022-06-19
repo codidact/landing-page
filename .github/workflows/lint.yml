@@ -1,16 +1,16 @@
-name: Lint
 on:
   pull_request:
     types: [opened, synchronize]
 jobs:
   lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup NodeJS
         uses: actions/setup-node@v3
         with:
-          node-version: "lts/*"
+          node-version: "14"
       - name: Build repo
         run: npm install && npm run build
       - run: npm run lint
