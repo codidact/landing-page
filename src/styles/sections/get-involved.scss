@@ -4,7 +4,7 @@
     padding-bottom: 100px;
 
     > .container {
-        text-align: left;
+        text-align: center;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: $column-gutter * 2;
@@ -15,7 +15,7 @@
         }
 
         @include for-tablet-landscape-up {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
@@ -43,13 +43,9 @@
         &.discord img {
             height: auto;
             width: 70px;
-        }
 
-        &.wiki img {
-            height: auto;
-            width: 110px;
-            top: 8px;
-            position: relative;
         }
     }
+    
+
 }
