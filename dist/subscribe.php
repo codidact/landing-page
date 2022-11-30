@@ -18,15 +18,18 @@ $pattern = '/^(?!(?:(?:\\x22?\\x5C[\\x00-\\x7E]\\x22?)|(?:\\x22?[^\\x5C\\x22]\\x
  * Makes it easy to edit the username, password, port, etc.
  * LOAD from a env file that's in the root folder, the template can be found in
  * .env.example file
+ *
+ * Original:  $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+ * Changed to put in private folder outside www
  */
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable('/home/codidact/private/');
 $dotenv->load();
 $constants = array(
   "HOST" => $_ENV['HOST'],
   "USERNAME" => $_ENV['USERNAME'],
   "PASSWORD" => $_ENV['PASSWORD'],
   "PORT" => (int)$_ENV['PORT'],
-  "FROM" => $_ENV['FROM'],
+  "TO" => $_ENV['TO'],
   "DEBUG" => (int)$_ENV['DEBUG']
 );
 
@@ -53,14 +56,12 @@ try {
    * Server settings.
   */
   $mail->SMTPDebug = $constants["DEBUG"];
-  $mail->isSMTP();
   $mail->Host       = $constants["HOST"];
   $mail->SMTPAuth   = true;
   $mail->Username   = $constants["USERNAME"];
   $mail->Password   = $constants["PASSWORD"];
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $mail->Port       = $constants["PORT"];
-  $mail->SMTPSecure = 'ssl';
   /*
    * Should be turned on in production.
    * $mail->SMTPDebug  = false;
@@ -69,23 +70,22 @@ try {
   /*
    * Email recipents.
    */
-  $mail->setFrom($constants["FROM"]);
-  $mail->addAddress($emailString);
+  $mail->setFrom($emailString);
+  $mail->addAddress($constants["TO"]);
   /*
       Content section. Subject and body goes here.
    */
-  $mail->Subject = '';
-  $mail->Body    = '';
+  $mail->Subject = 'Subscription to Codidact email list';
+  $mail->Body    = 'Subscription request for announcements@codidact.org';
   $mail->AltBody = '';
   /*
       Send the mail.
    */
   $mail->send();
-  $responseString = "Subscribed!";
+  $responseString = "Thank you for your subscription request. You should receive an automated message with confirmation instructions.<br><a href=\"https://codidact.org\">Click here to return to Codidact</a>";
   echo $responseString;
 } catch (Exception $e) {
   $err = $mail->ErrorInfo;
   $responseString = "Mail was not sent, please report the issue <a href='https://github.com/codidact/landing-page/issues'>here</a>";
   echo $responseString;
 }
-
