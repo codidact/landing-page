@@ -8,6 +8,7 @@ A staging environment is available at https://codidact.github.io/landing-page *(
 ## Setting up your local development environment
 
 -   Ensure node and npm are installed locally [(nvm recommended)](https://github.com/nvm-sh/nvm).
+-   Set node version to 16.14.0. You can install it using `nvm install 16.14.0`, and running `nvm use 16.14.0` to use it in the project.
 -   Run `npm install` to install project dependencies.
 -   Run `npm run start` to start the front-end. This can be viewed by navigating to `localhost:3000` in your browser.
 
