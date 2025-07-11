@@ -22,7 +22,7 @@ This should make changes in `dist`.  Include those in your commit.
 
 ## Linting
 
-Whilst CI tools will be used at a later date, before submitting a PR ensure your code is linted by running `npm run lint`. Any submitted PRs will be rejected if linting does not pass.
+Before submitting a PR, ensure your code is linted by running `npm run lint`. Any submitted PRs will be rejected if linting does not pass.
 
 -   All formatting (except JS) is handled by Prettier (we recommend installing an auto-formatter for your IDE). The configuration is located in `.prettierrc`.
 -   JS formatting and linting is handled by ESLint. JSON config resides in `.eslintrc` (to be added).

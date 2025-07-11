@@ -1,0 +1,24 @@
+name: Lint check
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint:
+    name: Linting
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+    - name: Install Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16.14.0
+    - run: npm ci
+    - run: npm run lint
