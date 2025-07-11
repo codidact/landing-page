@@ -1,0 +1,7 @@
+FROM node:16.14.0
+
+COPY . /app
+
+WORKDIR /app
+
+CMD sleep 100d
