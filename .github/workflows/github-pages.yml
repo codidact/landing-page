@@ -18,11 +18,13 @@ jobs:
           node-version: 22.13.1
       - run: npm ci
       - run: npm run build
+      # https://github.com/actions/upload-pages-artifact?tab=readme-ov-file#usage
       - name: Upload build artifacts
         id: upload
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
+  # https://github.com/actions/deploy-pages?tab=readme-ov-file#usage
   deploy:
     environment:
       name: github-pages
