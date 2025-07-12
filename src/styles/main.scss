@@ -1,8 +1,8 @@
 @use "sass:meta";
-@use "normalize.scss";
-@use "variables.scss";
-@use "grid.scss";
-@use "typography.scss";
+@use "normalize";
+@use "variables";
+@use "grid";
+@use "typography";
 @use "colors";
 @use "responsive";
 @use "text";
@@ -168,14 +168,14 @@ div#faq {
     }
 }
 
-@include meta.load-css("loader.scss");
-@include meta.load-css("sections/header.scss");
-@include meta.load-css("sections/hero.scss");
-@include meta.load-css("sections/get-involved.scss");
-@include meta.load-css("sections/what-is-codidact.scss");
-@include meta.load-css("sections/community-first.scss");
-@include meta.load-css("sections/signup.scss");
-@include meta.load-css("sections/faq.scss");
-@include meta.load-css("sections/mailing-list.scss");
-@include meta.load-css("sections/footer.scss");
-@include meta.load-css("sections/donors.scss");
+@include meta.load-css("loader");
+@include meta.load-css("sections/header");
+@include meta.load-css("sections/hero");
+@include meta.load-css("sections/get-involved");
+@include meta.load-css("sections/what-is-codidact");
+@include meta.load-css("sections/community-first");
+@include meta.load-css("sections/signup");
+@include meta.load-css("sections/faq");
+@include meta.load-css("sections/mailing-list");
+@include meta.load-css("sections/footer");
+@include meta.load-css("sections/donors");

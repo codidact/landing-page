@@ -1,6 +1,6 @@
-@use "text.scss";
-@use "responsive.scss";
-@use "colors.scss";
+@use "text";
+@use "responsive";
+@use "colors";
 
 $max-body-width: 1200px;
 $gutter: 24px;
