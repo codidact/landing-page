@@ -39,8 +39,16 @@
                 padding: 80px 0 20px 0;
             }
 
+            @include responsive.for-narrow-only {
+                padding-top: 1em;
+            }
+
             h1 {
                 margin-top: 30%;
+
+                @include responsive.for-narrow-only {
+                    margin-top: 0;
+                }
             }
 
             button {

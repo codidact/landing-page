@@ -7,6 +7,10 @@
     padding-top: variables.$gutter;
     position: absolute;
 
+    @include responsive.for-narrow-only {
+        position: static;
+    }
+
     .links,
     .logo {
         position: relative;
@@ -28,6 +32,17 @@
         margin-top: 10px;
         margin-left: 2%;
         justify-content: space-evenly;
+
+        @include responsive.for-narrow-only {
+            display: inline-flex;
+            flex-wrap: wrap;
+            column-gap: 0.5em;
+            row-gap: 1em;
+
+            a {
+                margin-left: 0;
+            }
+        }
 
         @include responsive.for-image-adjustments {
             width: 100%;
