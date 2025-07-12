@@ -14,7 +14,7 @@
 html {
     font-family: text.$primary-font;
     font-size: text.$has-normal-font-size;
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(229 229 229);
 }
 
 a {
@@ -29,7 +29,7 @@ a {
 .button-container {
     margin: 0 auto;
     transition: box-shadow 0.3s ease-in-out, bottom 0.3s ease-in-out;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 25%);
     bottom: 0;
     position: relative;
 
@@ -42,7 +42,7 @@ a {
     }
 
     &:hover {
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
         bottom: 4px;
     }
 
@@ -65,7 +65,7 @@ a {
         font-size: 0.8rem;
         letter-spacing: 0.5px;
         line-height: 1.5;
-        margin: 0 20px 50px 20px;
+        margin: 0 20px 50px;
     }
 }
 
@@ -76,12 +76,12 @@ a {
 
 .card {
     transition: box-shadow 0.3s ease-in-out, bottom 0.3s ease-in-out;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 25%);
     bottom: 0;
     position: relative;
 
     &:hover {
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
         bottom: 4px;
     }
 
@@ -104,7 +104,7 @@ a {
         font-size: 0.8rem;
         letter-spacing: 0.5px;
         line-height: 1.5;
-        margin: 0 20px 50px 20px;
+        margin: 0 20px 50px;
     }
 }
 
@@ -114,7 +114,7 @@ a {
 }
 
 input {
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     border: none;
     width: 100%;
     height: 50px;
@@ -123,8 +123,8 @@ input {
     min-width: 300px;
     color: colors.$color-black;
     font-size: 20px;
-    -webkit-appearance: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    appearance: none;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 45%);
     background: white;
     outline: none;
 }
@@ -132,8 +132,8 @@ input {
 button {
     /* iOS button padding bug fix */
     padding: 0;
-    padding: 10px 20px 10px 20px;
-    -webkit-appearance: none;
+    padding: 10px 20px;
+    appearance: none;
     border-radius: 20px;
     background: colors.$button-background;
     display: block;
@@ -154,7 +154,7 @@ button {
     }
 
     &:hover {
-        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 10px rgb(0 0 0 / 20%);
     }
 }
 
