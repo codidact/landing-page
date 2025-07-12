@@ -4,6 +4,12 @@ services:
     build:
       context: "."
       dockerfile: ./Dockerfile.dev
+      args:
+        - DEV_PORT=${DEV_PORT:-3000}
+    env_file:
+      - ./.env
+    ports:
+      - "${HOST_DEV_PORT:-3000}:${DEV_PORT:-3000}"
     user: 1000:1000
     volumes:
       - .:/app

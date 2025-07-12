@@ -1,7 +1,12 @@
 FROM node:22.13.1
 
+# build arg value is defined in compose:
+ARG DEV_PORT
+
 COPY . /app
 
 WORKDIR /app
+
+EXPOSE ${DEV_PORT:-3000}
 
 CMD sleep 100d
