@@ -1,42 +1,45 @@
+@use "responsive";
+@use "text";
+
 .heading {
     &--primary {
-        font-size: $has-large-font-size;
-        font-weight: $has-black-weight;
+        font-size: text.$has-large-font-size;
+        font-weight: text.$has-black-weight;
         letter-spacing: 1.2px;
         line-height: 1;
         margin: 0;
         padding: 0;
 
-        @include for-tablet-landscape-up {
-            font-size: $has-x-large-font-size--mobile;
+        @include responsive.for-tablet-landscape-up {
+            font-size: text.$has-x-large-font-size--mobile;
             letter-spacing: 1.2px;
         }
 
-        @include for-desktop-up {
-            font-size: $has-x-large-font-size;
-            font-weight: $has-black-weight;
+        @include responsive.for-desktop-up {
+            font-size: text.$has-x-large-font-size;
+            font-weight: text.$has-black-weight;
             letter-spacing: 2px;
         }
     }
 
     &--secondary {
-        font-size: $has-large-font-size;
-        font-weight: $has-regular-weight;
+        font-size: text.$has-large-font-size;
+        font-weight: text.$has-regular-weight;
         margin: 0;
         padding: 0;
     }
 
     &--tertiary {
-        font-size: $has-medium-font-size;
-        font-weight: $has-regular-weight;
+        font-size: text.$has-medium-font-size;
+        font-weight: text.$has-regular-weight;
         margin: 0;
         padding: 0;
     }
 }
 
 p {
-    font-size: $has-normal-font-size;
-    font-weight: $has-regular-weight;
+    font-size: text.$has-normal-font-size;
+    font-weight: text.$has-regular-weight;
     margin: 0;
     padding: 0;
     line-height: 1.8;
@@ -44,5 +47,5 @@ p {
 }
 
 strong {
-    font-weight: $has-bold-weight;
+    font-weight: text.$has-bold-weight;
 }

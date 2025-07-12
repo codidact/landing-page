@@ -1,13 +1,16 @@
+@use "../colors";
+@use "../responsive";
+
 .donors {
     margin: 50px auto 80px auto;
     display: flex;
     justify-content: center;
 
-    @include for-tablet-landscape-up {
+    @include responsive.for-tablet-landscape-up {
         left: -10%;
     }
 
-    @include for-phone-only {
+    @include responsive.for-phone-only {
         margin-top: 0;
     }
 
@@ -16,7 +19,7 @@
         max-width: 800px;
 
         .heading--secondary {
-            color: $color-black;
+            color: colors.$color-black;
             margin: auto;
         }
     }

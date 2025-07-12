@@ -1,3 +1,6 @@
+@use "../responsive";
+@use "../variables";
+
 .get-involved {
     text-align: center;
     padding-top: 50px;
@@ -7,14 +10,14 @@
         text-align: center;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: $column-gutter * 2;
+        grid-gap: variables.$column-gutter * 2;
 
-        @include for-tablet-portrait-up {
+        @include responsive.for-tablet-portrait-up {
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: $column-gutter;
+            grid-gap: variables.$column-gutter;
         }
 
-        @include for-tablet-landscape-up {
+        @include responsive.for-tablet-landscape-up {
             grid-template-columns: repeat(3, 1fr);
         }
     }

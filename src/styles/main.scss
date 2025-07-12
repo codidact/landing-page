@@ -1,20 +1,24 @@
-@import "normalize.scss";
-@import "variables.scss";
-@import "grid.scss";
-@import "typography.scss";
+@use "sass:meta";
+@use "normalize.scss";
+@use "variables.scss";
+@use "grid.scss";
+@use "typography.scss";
+@use "colors";
+@use "responsive";
+@use "text";
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-family: $primary-font;
-    font-size: $has-normal-font-size;
+    font-family: text.$primary-font;
+    font-size: text.$has-normal-font-size;
     background-color: rgb(229, 229, 229);
 }
 
 a {
-    color: $color-blue;
+    color: colors.$color-blue;
     text-decoration: none;
 }
 
@@ -29,11 +33,11 @@ a {
     bottom: 0;
     position: relative;
 
-    @include for-tablet-portrait-up {
+    @include responsive.for-tablet-portrait-up {
         width: 340px;
     }
 
-    @include for-tablet-landscape-up {
+    @include responsive.for-tablet-landscape-up {
         width: 390px;
     }
 
@@ -44,14 +48,14 @@ a {
 
     header {
         width: 100%;
-        background: $color-black;
+        background: colors.$color-black;
         text-align: center;
         padding: 15px 0;
         height: 90px;
     }
 
     .card__heading {
-        color: $color-black;
+        color: colors.$color-black;
         font-size: 1.4rem;
         font-weight: 400;
         margin: 25px 20px;
@@ -66,7 +70,7 @@ a {
 }
 
 .footer {
-    background-color: $color-black;
+    background-color: colors.$color-black;
     margin-top: 60px;
 }
 
@@ -83,14 +87,14 @@ a {
 
     header {
         width: 100%;
-        background: $color-black;
+        background: colors.$color-black;
         text-align: center;
         padding: 15px 0;
         height: 90px;
     }
 
     .card__heading {
-        color: $color-black;
+        color: colors.$color-black;
         font-size: 1.4rem;
         font-weight: 400;
         margin: 25px 20px;
@@ -106,7 +110,7 @@ a {
 
 .card--link {
     text-decoration: none;
-    color: $color-black;
+    color: colors.$color-black;
 }
 
 input {
@@ -117,7 +121,7 @@ input {
     display: block;
     border-radius: 10px;
     min-width: 300px;
-    color: $color-black;
+    color: colors.$color-black;
     font-size: 20px;
     -webkit-appearance: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
@@ -131,7 +135,7 @@ button {
     padding: 10px 20px 10px 20px;
     -webkit-appearance: none;
     border-radius: 20px;
-    background: $button-background;
+    background: colors.$button-background;
     display: block;
     transition: 0.2s all ease;
     font-size: 20px;
@@ -164,14 +168,14 @@ div#faq {
     }
 }
 
-@import "loader.scss";
-@import "sections/header.scss";
-@import "sections/hero.scss";
-@import "sections/get-involved.scss";
-@import "sections/what-is-codidact.scss";
-@import "sections/community-first.scss";
-@import "sections/signup.scss";
-@import "sections/faq.scss";
-@import "sections/mailing-list.scss";
-@import "sections/footer.scss";
-@import "sections/donors.scss";
+@include meta.load-css("loader.scss");
+@include meta.load-css("sections/header.scss");
+@include meta.load-css("sections/hero.scss");
+@include meta.load-css("sections/get-involved.scss");
+@include meta.load-css("sections/what-is-codidact.scss");
+@include meta.load-css("sections/community-first.scss");
+@include meta.load-css("sections/signup.scss");
+@include meta.load-css("sections/faq.scss");
+@include meta.load-css("sections/mailing-list.scss");
+@include meta.load-css("sections/footer.scss");
+@include meta.load-css("sections/donors.scss");

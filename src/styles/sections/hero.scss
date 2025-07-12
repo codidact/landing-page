@@ -1,3 +1,6 @@
+@use "../colors";
+@use "../responsive";
+
 .hero {
     display: flex;
     vertical-align: middle;
@@ -10,7 +13,7 @@
         right: 0;
         z-index: 4;
 
-        @include for-image-adjustments {
+        @include responsive.for-image-adjustments {
             display: none;
         }
     }
@@ -29,7 +32,7 @@
             grid-column: 1 / 2;
             grid-row: 1 / 2;
 
-            @include for-image-adjustments {
+            @include responsive.for-image-adjustments {
                 text-align: center;
                 grid-column: 1 / 3;
                 grid-row: 1 / 3;
@@ -42,11 +45,11 @@
 
             button {
                 padding: 30px 100px 30px 100px;
-                background: $color-light-yellow;
+                background: colors.$color-light-yellow;
                 margin-top: 50px;
                 color: black;
 
-                @include for-image-adjustments {
+                @include responsive.for-image-adjustments {
                     display: block;
                     margin: 50px auto;
                 }
@@ -63,7 +66,7 @@
             display: flex;
             justify-content: flex-start;
 
-            @include for-image-adjustments {
+            @include responsive.for-image-adjustments {
                 display: none;
             }
 

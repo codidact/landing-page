@@ -1,13 +1,16 @@
+@use "../colors";
+@use "../responsive";
+
 .mailing-list {
 	width: 100%;
 	padding: 20px;
 	padding-bottom: 100px;
 	padding-top: 100px;
-	background: $color-light-blue;
+	background: colors.$color-light-blue;
 
 	h4 {
 		margin-bottom: 20px;
-		color: $color-white;
+		color: colors.$color-white;
 	}
 
 	.list--container {
@@ -23,7 +26,7 @@
 			}
 
 			.js-error, .js-form-response {
-    			color: $color-warning;
+    			color: colors.$color-warning;
 			}
 
 			.js-form {
@@ -35,7 +38,7 @@
 		}
 
 		img {
-			@include for-phone-only {
+			@include responsive.for-phone-only {
 				display: none;
 			}
 
