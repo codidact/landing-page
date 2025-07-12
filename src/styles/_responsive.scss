@@ -1,7 +1,14 @@
+$screensize-narrow: 500px;
 $screensize-phone: 600px;
 $screensize-tablet: 900px;
 $screensize-desktop: 1200px;
 $screensize-large-desktop: 1800px;
+
+@mixin for-narrow-only {
+    @media (width <= 499px) {
+        @content;
+    }
+}
 
 @mixin for-phone-only {
     @media (width <= 599px) {
