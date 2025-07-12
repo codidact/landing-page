@@ -35,8 +35,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "assets/css/[name].css",
-            sourceMap: true,
+            filename: "assets/css/[name].css"
         }),
     ],
     devtool: "source-map",

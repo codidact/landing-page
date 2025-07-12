@@ -1,8 +1,10 @@
-@import "variables.scss";
+@use "../variables.scss";
+@use "../colors";
+@use "../responsive";
 
 .header {
-    padding-bottom: $gutter;
-    padding-top: $gutter;
+    padding-bottom: variables.$gutter;
+    padding-top: variables.$gutter;
     position: absolute;
 
     .links,
@@ -12,7 +14,7 @@
     }
 
     .logo {
-        @include for-image-adjustments {
+        @include responsive.for-image-adjustments {
             display: block;
             margin: 0px auto;
             margin-bottom: 10px;
@@ -27,7 +29,7 @@
         margin-left: 2%;
         justify-content: space-evenly;
 
-        @include for-image-adjustments {
+        @include responsive.for-image-adjustments {
             width: 100%;
             text-align: center;
             margin-top: 40px;
@@ -41,9 +43,9 @@
             font-size: 20px;
             text-decoration: none;
             position: relative;
-            color: $color-black;
+            color: colors.$color-black;
 
-            @include for-image-adjustments {
+            @include responsive.for-image-adjustments {
                 margin-left: 0px;
             }
 

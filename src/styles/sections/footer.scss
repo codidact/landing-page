@@ -1,3 +1,6 @@
+@use "../colors";
+@use "../text";
+
 .footer {
     text-align: center;
     padding: 50px 0 60px 0;
@@ -10,8 +13,8 @@
     }
 
     .tagline {
-        color: $color-white;
+        color: colors.$color-white;
         font-size: 0.8rem;
-        font-weight: $has-regular-weight;
+        font-weight: text.$has-regular-weight;
     }
 }

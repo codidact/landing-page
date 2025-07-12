@@ -17,7 +17,7 @@ module.exports = api => {
     } else {
         return {
             presets: [["@babel/preset-env", { modules: false }]],
-            plugins: ["@babel/plugin-proposal-class-properties"],
+            plugins: ["@babel/plugin-transform-class-properties"],
             overrides: [
                 {
                     test: ["./config"],
