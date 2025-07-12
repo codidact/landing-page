@@ -37,7 +37,7 @@ module.exports = {
     },
     devServer: {
         static: ["./dist"],
-        port: 3000,
+        port: process.env.DEV_PORT ?? 3000,
     },
     devtool: "eval-nosources-cheap-source-map",
 };
