@@ -25,9 +25,10 @@
     }
 
     img {
+        width: 40%;
+        
         @include responsive.for-image-adjustments {
             display: none;
         }
-        width: 40%;
     }
 }
