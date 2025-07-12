@@ -38,14 +38,14 @@
 		}
 
 		img {
-			@include responsive.for-phone-only {
-				display: none;
-			}
-
 			position: absolute;
 			right: 0;
 			top: 0;
 			width: 25%;
+			
+			@include responsive.for-phone-only {
+				display: none;
+			}
 		}
 	}
 }

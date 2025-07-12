@@ -32,12 +32,12 @@
     }
 
     img {
+        margin-right: 20px;
+        width: 30%;
+        
         @include responsive.for-image-adjustments {
             display: none;
         }
-
-        margin-right: 20px;
-        width: 30%;
     }
 }
 
