@@ -51,5 +51,8 @@
     },
     "dependencies": {
         "stylelint": "^16.21.1"
+    },
+    "engines": {
+        "node": ">= 22.13.1"
     }
 }
