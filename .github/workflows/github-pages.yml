@@ -1,0 +1,40 @@
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build landing page
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 22.13.1
+      - run: npm ci
+      - run: npm run build
+      # https://github.com/actions/upload-pages-artifact?tab=readme-ov-file#usage
+      - name: Upload build artifacts
+        id: upload
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+  # https://github.com/actions/deploy-pages?tab=readme-ov-file#usage
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy landing page
+        id: deploy
+        uses: actions/deploy-pages@v4
