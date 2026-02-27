@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build:
@@ -25,7 +26,8 @@ jobs:
         with:
           path: dist/
   # https://github.com/actions/deploy-pages?tab=readme-ov-file#usage
-  deploy:
+  stage:
+    name: Deploy staging environment
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
