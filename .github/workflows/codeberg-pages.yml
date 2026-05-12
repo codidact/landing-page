@@ -1,0 +1,56 @@
+name: Publish to Codeberg Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 22.13.1
+
+jobs:
+  build:
+    name: Build landing page
+    runs-on: codeberg-tiny-lazy
+    outputs:
+      artifact-id: ${{ steps.upload.outputs.artifact-id }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          check-latest: false
+      - run: npm ci
+      - run: npm run build
+      # https://code.forgejo.org/actions/upload-artifact
+      - name: Upload build artifact
+        id: upload
+        uses: forgejo/upload-artifact@v4
+        with:
+          name: landing-page-staging-build
+          if-no-files-found: error
+          path: dist/
+  # https://docs.codeberg.org/codeberg-pages/forgejo-actions/
+  stage:
+    name: Deploy staging environment
+    runs-on: codeberg-tiny-lazy
+    needs: build
+    env:
+      DEPLOY_SOURCE: deploy/
+    steps:
+      - name: Download build artifact
+        uses: forgejo/download-artifact@v7
+        with:
+          artifact-ids: ${{ needs.build.outputs.artifact-id }}
+          path: ${{ env.DEPLOY_SOURCE }}
+      - name: Deploy landing page
+        id: deploy
+        uses: actions/git-pages@v2
+        with:
+          site: 'https://${{ forge.repository_owner }}.codeberg.page/landing-page/'
+          token: ${{ forge.token }}
+          source: ${{ env.DEPLOY_SOURCE }}
