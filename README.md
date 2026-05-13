@@ -1,14 +1,14 @@
 # codidact/landing-page
 
-The Codidact project landing page. It should contain a high-level overview of what the Codidact project is about, as well as references to resources such as the  [Wiki](https://github.com/codidact/docs/wiki), [Meta](https://meta.codidact.com/), and [chat](https://discord.gg/PSr9pmn).
+The Codidact project landing page. It should contain a high-level overview of what the Codidact project is about, as well as references to resources such as the [Wiki](https://github.com/codidact/docs/wiki), [Meta](https://meta.codidact.com/), and [chat](https://discord.gg/PSr9pmn).
 
 This site is live at https://codidact.org.
-A staging environment is available at https://codidact.github.io/landing-page *(deployed via [GitHub Pages](https://github.com/codidact/landing-page/deployments) based on the `gh-pages` branch)*.
+A staging environment is available at https://codidact.codeberg.page/landing-page/ *(see [deployment workflow](./.github/workflows/codeberg-pages.yml) for details)*.
 
 ## Setting up your local development environment
 
 -   Ensure node and npm are installed locally [(nvm recommended)](https://github.com/nvm-sh/nvm).
--   Set node version to 16.14.0. You can install it using `nvm install 16.14.0`, and running `nvm use 16.14.0` to use it in the project.
+-   Set node version to 22.13.1. You can install it using `nvm install 22.13.1`, and running `nvm use 22.13.1` to use it in the project.
 -   Run `npm install` to install project dependencies.
 -   Run `npm run start` to start the front-end. This can be viewed by navigating to `localhost:3000` in your browser.
 
