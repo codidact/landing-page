@@ -31,4 +31,5 @@ jobs:
           echo "ls -1" | sshpass -p "$DEPLOY_PASS" \
                          sftp -o "StrictHostKeyChecking no" \
                               -o "PubkeyAuthentication no" \
-                              "$DEPLOY_USER@$DEPLOY_HOST"
+                              -o "PasswordAuthentication yes" \
+                              "$DEPLOY_USER"@"$DEPLOY_HOST"
