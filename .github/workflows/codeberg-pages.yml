@@ -9,6 +9,7 @@ on:
 env:
   NODE_VERSION: 22.13.1
   ARTIFACT_NAME: landing-page-staging-build
+  DEPLOY_SOURCE: deploy/
 
 jobs:
   build:
@@ -40,8 +41,6 @@ jobs:
     name: Deploy staging environment
     runs-on: codeberg-tiny-lazy
     needs: build
-    env:
-      DEPLOY_SOURCE: deploy/
     steps:
       - name: Download build artifact
         uses: forgejo/download-artifact@v7

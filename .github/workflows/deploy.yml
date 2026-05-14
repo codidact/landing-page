@@ -5,6 +5,7 @@ on:
 
 env:
   ARTIFACT_NAME: landing-page-staging-build
+  DEPLOY_SOURCE: deploy/
 
 jobs:
   deploy:
@@ -17,5 +18,5 @@ jobs:
         with:
           key: ${{ env.ARTIFACT_NAME }}
           fail-on-cache-miss: true
-          path: '**'
+          path: ${{ env.DEPLOY_SOURCE }}
       - run: ls -la .
