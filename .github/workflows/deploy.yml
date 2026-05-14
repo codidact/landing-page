@@ -27,4 +27,5 @@ jobs:
           curl --list-only \
                --pubkey "" \
                --silent -k \
+               --show-error \
                "sftp://$DEPLOY_USER:$DEPLOY_PASS@$DEPLOY_HOST"
