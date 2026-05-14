@@ -37,8 +37,6 @@ jobs:
             mirror --continue \
                    --dereference \
                    --reverse \
-                   --verbose=3 \
-                   --dry-run \
                    "$DEPLOY_SOURCE" "$DEPLOY_PATH";
             exit
           CMD
