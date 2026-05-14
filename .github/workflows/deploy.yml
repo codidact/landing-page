@@ -29,5 +29,6 @@ jobs:
           sudo apt-get install -yqq sshpass
       - run: |
           echo "ls -1" | sshpass -p "$DEPLOY_PASS" \
-                         sftp -o "PubkeyAuthentication no" \
-                         "$DEPLOY_USER@$DEPLOY_HOST"
+                         sftp -o "StrictHostKeyChecking no" \
+                              -o "PubkeyAuthentication no" \
+                              "$DEPLOY_USER@$DEPLOY_HOST"
