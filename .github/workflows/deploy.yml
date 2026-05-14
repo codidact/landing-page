@@ -11,6 +11,10 @@ jobs:
   deploy:
     name: Deploy production environment
     runs-on: codeberg-tiny-lazy
+    env:
+      DEPLOY_HOST: ${{ secrets.FTP_HOST }}
+      DEPLOY_USER: ${{ secrets.FTP_USER }}
+      DEPLOY_PASS: ${{ secrets.FTP_PASS }}
     steps:
       # TODO: switch to download-artifact when forgejo/forgejo#8004 is fixed
       - name: Download build artifact
@@ -20,3 +24,4 @@ jobs:
           fail-on-cache-miss: true
           path: ${{ env.DEPLOY_SOURCE }}
       - run: ls -la .
+      - run: curl -k "sftp://$DEPLOY_HOST/" --list-only --user "$DEPLOY_USER:$DEPLOY_PASS"
