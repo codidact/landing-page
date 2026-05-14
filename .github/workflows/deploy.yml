@@ -23,4 +23,4 @@ jobs:
           key: ${{ env.ARTIFACT_NAME }}
           fail-on-cache-miss: true
           path: ${{ env.DEPLOY_SOURCE }}
-      - run: which sftp
+      - run: curl --list-only -vk "sftp://$DEPLOY_USER:$DEPLOY_PASS@$DEPLOY_HOST"
