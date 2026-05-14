@@ -3,6 +3,9 @@ name: Deploy to production
 on:
   workflow_dispatch:
 
+env:
+  ARTIFACT_NAME: landing-page-staging-build
+
 jobs:
   deploy:
     name: Deploy production environment
@@ -12,7 +15,7 @@ jobs:
       - name: Download build artifact
         uses: actions/cache/restore@v5
         with:
-          key: landing-page-staging-build
+          key: ${{ env.ARTIFACT_NAME }}
           fail-on-cache-miss: true
           path: '**'
       - run: ls -la .
