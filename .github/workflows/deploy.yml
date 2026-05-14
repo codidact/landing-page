@@ -23,9 +23,11 @@ jobs:
           key: ${{ env.ARTIFACT_NAME }}
           fail-on-cache-miss: true
           path: ${{ env.DEPLOY_SOURCE }}
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -yqq sshpass
       - run: |
-          curl --list-only \
-               --pubkey "" \
-               --silent -k \
-               --show-error \
-               "sftp://$DEPLOY_USER:$DEPLOY_PASS@$DEPLOY_HOST"
+          echo "ls -1" | sshpass -p "$DEPLOY_PASS" \
+                         sftp -o "PubkeyAuthentication no" \
+                         "$DEPLOY_USER@$DEPLOY_HOST"
