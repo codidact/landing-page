@@ -27,8 +27,9 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -yqq sshpass
-      - run: |
-          echo "ls -1" | sshpass -p "$DEPLOY_PASS" \
+      - name: Deploy build artifact
+        run: |
+          echo "ls -1" | sshpass -v -p "$DEPLOY_PASS" \
                          sftp -o "StrictHostKeyChecking no" \
                               -o "PubkeyAuthentication no" \
                               -o "PasswordAuthentication yes" \
