@@ -47,6 +47,11 @@ jobs:
         with:
           artifact-ids: ${{ needs.build.outputs.artifact-id }}
           path: ${{ env.DEPLOY_SOURCE }}
+      - name: Save build artifact to cache
+        uses: actions/cache/save@v5
+        with:
+          key: landing-page-staging-build-${{ hashFiles(format('{0}**', env.DEPLOY_SOURCE)) }}
+          path: ${{ env.DEPLOY_SOURCE }}
       - name: Deploy landing page
         id: deploy
         uses: actions/git-pages@v2
