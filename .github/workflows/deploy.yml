@@ -6,7 +6,7 @@ on:
 env:
   ARTIFACT_NAME: landing-page-staging-build
   DEPLOY_SOURCE: deploy/
-  DEPLOY_PATH: /www/
+  DEPLOY_PATH: www/
 
 jobs:
   deploy:
@@ -27,11 +27,14 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -yqq sshpass
+          sudo apt-get install -yqq lftp
       - name: Deploy build artifact
         run: |
-          echo "ls -1" | sshpass -v -p "$DEPLOY_PASS" \
-                         sftp -o "StrictHostKeyChecking no" \
-                              -o "PubkeyAuthentication no" \
-                              -o "PasswordAuthentication yes" \
-                              "$DEPLOY_USER"@"$DEPLOY_HOST:$DEPLOY_PATH"
+          lftp -u "$DEPLOY_USER,$DEPLOY_PASS" "$DEPLOY_HOST" <<CMD
+            set ftp:ssl-force true;
+            set ftp:ssl-protect-data true;
+            set ftp:ssl-protect-list true;
+            cd "$DEPLOY_PATH";
+            ls;
+            exit
+          CMD
