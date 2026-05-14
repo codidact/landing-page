@@ -6,6 +6,7 @@ on:
 env:
   ARTIFACT_NAME: landing-page-staging-build
   DEPLOY_SOURCE: deploy/
+  DEPLOY_PATH: www/
 
 jobs:
   deploy:
@@ -33,4 +34,4 @@ jobs:
                          sftp -o "StrictHostKeyChecking no" \
                               -o "PubkeyAuthentication no" \
                               -o "PasswordAuthentication yes" \
-                              "$DEPLOY_USER"@"$DEPLOY_HOST"
+                              "$DEPLOY_USER"@"$DEPLOY_HOST/$DEPLOY_PATH"
