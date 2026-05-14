@@ -26,16 +26,17 @@
     }
 
     .links {
-        display: inline-block;
+        display: inline-flex;
         height: 100%;
         vertical-align: top;
         margin-top: 10px;
         margin-left: 2%;
         justify-content: space-evenly;
+        gap: 1em;
+        flex-wrap: wrap;
 
         @include responsive.for-narrow-only {
             display: inline-flex;
-            flex-wrap: wrap;
             column-gap: 0.5em;
             row-gap: 1em;
 
@@ -50,7 +51,6 @@
             margin-top: 40px;
             margin-left: 0;
             display: flex;
-            justify-content: space-evenly;
         }
 
         a {
