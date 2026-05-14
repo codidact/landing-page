@@ -34,7 +34,11 @@ jobs:
             set ftp:ssl-force true;
             set ftp:ssl-protect-data true;
             set ftp:ssl-protect-list true;
-            cd "$DEPLOY_PATH";
-            ls;
+            mirror --continue \
+                   --dereference \
+                   --reverse \
+                   --verbose=3 \
+                   --dry-run \
+                   "$DEPLOY_SOURCE" "$DEPLOY_PATH";
             exit
           CMD
