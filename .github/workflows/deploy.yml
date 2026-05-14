@@ -25,6 +25,6 @@ jobs:
           path: ${{ env.DEPLOY_SOURCE }}
       - run: |
           curl --list-only \
-               --pubkey="" \
+               --pubkey "" \
                --silent -k \
                "sftp://$DEPLOY_USER:$DEPLOY_PASS@$DEPLOY_HOST"
