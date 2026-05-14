@@ -1,0 +1,18 @@
+name: Deploy to production
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy production environment
+    runs-on: codeberg-tiny-lazy
+    steps:
+      # TODO: switch to download-artifact when forgejo/forgejo#8004 is fixed
+      - name: Download build artifact
+        uses: actions/cache/restore@v5
+        with:
+          key: landing-page-staging-build
+          fail-on-cache-miss: true
+          path: '**'
+      - run: ls -la .
