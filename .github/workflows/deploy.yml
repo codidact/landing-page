@@ -26,11 +26,11 @@ jobs:
           path: ${{ env.ARTIFACT_PATH }}
 
       - name: Checkout repo
-        if: steps.download.outputs.cache-hit == 'true'
+        if: steps.download.outputs.cache-hit != 'true'
         uses: actions/checkout@v6
 
       - id: build
-        if: steps.download.outputs.cache-hit == 'true'
+        if: steps.download.outputs.cache-hit != 'true'
         uses: ./.github/prepare
         with:
           artifact-name: ${{ env.ARTIFACT_NAME }}
@@ -50,7 +50,6 @@ jobs:
             mirror --continue \
                    --dereference \
                    --reverse \
-                   --dry-run \
                    "$ARTIFACT_PATH" "$DEPLOY_PATH";
             exit
           CMD
