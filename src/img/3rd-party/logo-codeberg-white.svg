@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   inkscape:export-ydpi="95.999992"
+   inkscape:export-xdpi="95.999992"
+   inkscape:export-filename="Codeberg_symbol.png"
+   id="svg6989"
+   version="1.1"
+   viewBox="0 0 1058.3334 1008.0625"
+   height="3810"
+   width="4000.0002"
+   sodipodi:docname="Codeberg_symbol_white.svg"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview10644"
+     showgrid="false"
+     inkscape:zoom="0.16"
+     inkscape:cx="1384.375"
+     inkscape:cy="2434.375"
+     inkscape:current-layer="g370484"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:showpageshadow="2" />
+  <title
+     id="title11271">Codeberg logo</title>
+  <defs
+     id="defs6983">
+    <linearGradient
+       xlink:href="#linearGradient6924"
+       id="linearGradient6918"
+       x1="42519.285"
+       y1="-7078.7891"
+       x2="42575.336"
+       y2="-6966.9307"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.53082847,0,0,0.53082847,-22503.25,3802.9052)" />
+    <linearGradient
+       id="linearGradient6924">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="0"
+         id="stop6920" />
+      <stop
+         id="stop6926"
+         offset="0.49517274"
+         style="stop-color:#ffffff;stop-opacity:0.30000001;" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.30000001;"
+         offset="1"
+         id="stop6922" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata6986">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Codeberg logo</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Robert Martinez</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:date>2020-04-09</dc:date>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Codeberg e.V.</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Codeberg and the Codeberg Logo are trademarks of Codeberg e.V.</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:source>codeberg.org</dc:source>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g370484"
+     inkscape:label="logo"
+     transform="matrix(11.056626,0,0,11.056626,-204.20061,-248.63374)">
+    <path
+       id="path6733"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:url(#linearGradient6918);fill-opacity:1;stroke:none;stroke-width:1.95263;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill;stop-color:#000000;stop-opacity:1"
+       d="m 67.197163,45.282479 a 0.40389081,0.30146645 0 0 0 -0.391751,0.357726 L 84.633816,112.46546 A 46.278877,46.278877 0 0 0 105.53837,94.542777 L 67.549633,45.43074 a 0.40389081,0.30146645 0 0 0 -0.35247,-0.148261 z"
+       inkscape:label="berg" />
+    <path
+       id="path360787"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:34.1178;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 66.328308,23.681859 c -25.560018,0 -46.27888,20.719866 -46.27888,46.279081 0,8.694218 2.447662,17.212886 7.066121,24.579749 L 65.700342,44.657325 c 0.276866,-0.360328 0.975052,-0.360328 1.251919,0 l 38.586799,49.88537 c 4.61846,-7.367264 7.06813,-15.886734 7.06813,-24.581755 0,-25.559215 -20.718865,-46.279081 -46.278882,-46.279081 z"
+       sodipodi:nodetypes="sccccccs"
+       inkscape:label="sky" />
+  </g>
+</svg>
