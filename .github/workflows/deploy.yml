@@ -6,7 +6,6 @@ on:
 env:
   ARTIFACT_NAME: landing-page-staging-build
   ARTIFACT_PATH: dist/
-  DEPLOY_SOURCE: deploy/
   DEPLOY_PATH: www/
 
 jobs:

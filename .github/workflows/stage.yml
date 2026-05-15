@@ -10,7 +10,6 @@ env:
   NODE_VERSION: 22.13.1
   ARTIFACT_NAME: landing-page-staging-build
   ARTIFACT_PATH: dist/
-  DEPLOY_SOURCE: deploy/
 
 jobs:
   build:
@@ -37,11 +36,11 @@ jobs:
         uses: forgejo/download-artifact@v7
         with:
           artifact-ids: ${{ needs.build.outputs.artifact-id }}
-          path: ${{ env.DEPLOY_SOURCE }}
+          path: ${{ env.ARTIFACT_PATH }}
       - name: Deploy landing page
         id: deploy
         uses: actions/git-pages@v2
         with:
           site: 'https://${{ forge.repository_owner }}.codeberg.page/landing-page/'
           token: ${{ forge.token }}
-          source: ${{ env.DEPLOY_SOURCE }}
+          source: ${{ env.ARTIFACT_PATH }}
