@@ -57,7 +57,7 @@ This should make changes in `dist`. Include those in your commit.
 ### FAQ items are not part of the repo
 
 Items for the FAQ section are sourced from our [docs repository](https://codeberg.org/codidact/docs/src/branch/master/User-Help/CodidactMainPageFAQ.md).
-If you want to update them, pleaae open an issue or a PR there.
+If you want to update them, please open an issue or a PR there.
 
 ### Linting
 

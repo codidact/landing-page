@@ -2,7 +2,7 @@ import "../styles/main.scss";
 
 const $ = (selector) => document.querySelector(selector);
 const create = (element) => document.createElement(element);
-const docLoc = "https://codeberg.org/codidact/docs/raw/branch/master/User-Help/CodidactMainPageFAQ.md";
+const docLoc = "https://raw.githubusercontent.com/codidact/docs/master/User-Help/CodidactMainPageFAQ.md";
 const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 $(".js-email-input").addEventListener("keyup", (e) => {
