@@ -32,6 +32,12 @@
             height: auto;
         }
 
+        &.forge header {
+            display: flex;
+            justify-content: center;
+            column-gap: 1em;
+        }
+
         &.meta img {
             height: 100%;
             filter: brightness(0) invert(1);
