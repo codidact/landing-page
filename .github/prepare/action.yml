@@ -1,0 +1,50 @@
+inputs:
+  artifact-name:
+    description: 'Name of the artifact to upload'
+    required: true
+  artifact-path:
+    description: 'A file, directory or wildcard pattern to upload'
+    required: true
+  node-version:
+    description: 'NodeJS engine version to use'
+    required: true
+outputs:
+  artifact-id:
+    description: 'ID of the uploaded artifact'
+    value: "${{ steps.set-outputs.outputs.artifact-id }}"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout repo
+      uses: actions/checkout@v6
+
+    - name: Install Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'npm'
+        check-latest: false
+
+    - run: npm ci
+    - run: npm run build
+
+    # https://code.forgejo.org/forgejo/upload-artifact
+    - name: Upload build artifact
+      id: upload-artifact
+      uses: forgejo/upload-artifact@v4
+      with:
+        name: ${{ inputs.artifact-name }}
+        if-no-files-found: error
+        path: ${{ inputs.artifact-path }}
+
+    # https://code.forgejo.org/actions/cache
+    - name: Cache build artifact
+      uses: actions/cache/save@v5
+      with:
+        key: ${{ inputs.artifact-name }}
+        path: ${{ inputs.artifact-path }}
+
+    - name: Set outputs
+      id: set-outputs
+      run: echo artifact-id=${{ steps.upload-artifact.outputs.artifact-id }} >> $FORGEJO_OUTPUT

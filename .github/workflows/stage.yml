@@ -9,6 +9,7 @@ on:
 env:
   NODE_VERSION: 22.13.1
   ARTIFACT_NAME: landing-page-staging-build
+  ARTIFACT_PATH: dist/
   DEPLOY_SOURCE: deploy/
 
 jobs:
@@ -18,24 +19,12 @@ jobs:
     outputs:
       artifact-id: ${{ steps.upload.outputs.artifact-id }}
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v6
-      - name: Install Node
-        uses: actions/setup-node@v4
+      - id: build
+        uses: ./.github/prepare
         with:
+          artifact-name: ${{ env.ARTIFACT_NAME }}
+          artifact-path: ${{ env.ARTIFACT_PATH }}
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-          check-latest: false
-      - run: npm ci
-      - run: npm run build
-      # https://code.forgejo.org/actions/upload-artifact
-      - name: Upload build artifact
-        id: upload
-        uses: forgejo/upload-artifact@v4
-        with:
-          name: ${{ env.ARTIFACT_NAME }}
-          if-no-files-found: error
-          path: dist/
   # https://docs.codeberg.org/codeberg-pages/forgejo-actions/
   stage:
     name: Deploy staging environment
@@ -46,11 +35,6 @@ jobs:
         uses: forgejo/download-artifact@v7
         with:
           artifact-ids: ${{ needs.build.outputs.artifact-id }}
-          path: ${{ env.DEPLOY_SOURCE }}
-      - name: Save build artifact to cache
-        uses: actions/cache/save@v5
-        with:
-          key: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.DEPLOY_SOURCE }}
       - name: Deploy landing page
         id: deploy
