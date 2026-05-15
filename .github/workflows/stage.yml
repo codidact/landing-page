@@ -19,6 +19,8 @@ jobs:
     outputs:
       artifact-id: ${{ steps.upload.outputs.artifact-id }}
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
       - id: build
         uses: ./.github/prepare
         with:
