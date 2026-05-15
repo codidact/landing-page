@@ -54,6 +54,11 @@ After you make changes, build:
 
 This should make changes in `dist`. Include those in your commit.
 
+### FAQ items are not part of the repo
+
+Items for the FAQ section are sourced from our [docs repository](https://codeberg.org/codidact/docs/src/branch/master/User-Help/CodidactMainPageFAQ.md).
+If you want to update them, pleaae open an issue or a PR there.
+
 ### Linting
 
 Before submitting a PR, ensure your code is linted by running `npm run lint`. Any submitted PRs will be rejected if linting does not pass.
