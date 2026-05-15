@@ -5,6 +5,7 @@ on:
 
 env:
   ARTIFACT_NAME: landing-page-staging-build
+  ARTIFACT_PATH: dist/
   DEPLOY_SOURCE: deploy/
   DEPLOY_PATH: www/
 
@@ -19,11 +20,24 @@ jobs:
     steps:
       # TODO: switch to download-artifact when forgejo/forgejo#8004 is fixed
       - name: Download build artifact
+        id: download
         uses: actions/cache/restore@v5
         with:
           key: ${{ env.ARTIFACT_NAME }}
-          fail-on-cache-miss: true
-          path: ${{ env.DEPLOY_SOURCE }}
+          path: ${{ env.ARTIFACT_PATH }}
+
+      - name: Checkout repo
+        if: steps.download.outputs.cache-hit == 'true'
+        uses: actions/checkout@v6
+
+      - id: build
+        if: steps.download.outputs.cache-hit == 'true'
+        uses: ./.github/prepare
+        with:
+          artifact-name: ${{ env.ARTIFACT_NAME }}
+          artifact-path: ${{ env.ARTIFACT_PATH }}
+          node-version: ${{ env.NODE_VERSION }}
+
       - name: Install dependencies
         run: |
           sudo apt-get update -qq
@@ -37,6 +51,7 @@ jobs:
             mirror --continue \
                    --dereference \
                    --reverse \
-                   "$DEPLOY_SOURCE" "$DEPLOY_PATH";
+                   --dry-run \
+                   "$ARTIFACT_PATH" "$DEPLOY_PATH";
             exit
           CMD
